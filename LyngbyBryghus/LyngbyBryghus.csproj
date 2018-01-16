@@ -150,7 +150,6 @@
     <Content Include="fonts\Norse-Bold.ttf" />
     <Content Include="fonts\Norse-Bold.woff" />
     <Content Include="Views\Home\Kontakt.cshtml" />
-    <Content Include="Views\Home\Bestilling.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

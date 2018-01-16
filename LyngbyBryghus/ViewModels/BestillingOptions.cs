@@ -5,11 +5,11 @@ using System.Web;
 using LyngbyBrygRepo.Models;
 using LyngbyBrygRepo;
 
-namespace LyngbyBryghus
+namespace lyngbybryghys
 {
     public class BestillingOptions
     {
-        public List<ProduktTabellen> Produkter { get; set; }
+        public List<ProduktTabel> Produkter { get; set; }
         public List<KategoriTabel> Kategorier { get; set; }
 
     }
