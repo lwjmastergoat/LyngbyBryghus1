@@ -10,7 +10,7 @@ namespace LyngbyBrygRepo.Factories
 {
     public class ProduktFac:AutoFac<ProduktTabellen>
     {
-        public List<ProduktTabellen> GetAll()
+        public List<ProduktTabellen> GetProducts()
         {
             String SQL = "SELECT ProduktTabellen.Navn, Beskrivelse, Billede, Pris, Alkohol, Farve, Bitterhed, Gærtype, KategoriTabel.Navn FROM ProduktTabellen JOIN KategoriTabel on ProduktTabellen.KategoriID = KategoriTabel.ID";
 
