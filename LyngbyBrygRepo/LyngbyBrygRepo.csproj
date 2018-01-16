@@ -45,11 +45,12 @@
     <Compile Include="DDMF\Mapper.cs" />
     <Compile Include="Factories\AdminFac.cs" />
     <Compile Include="Factories\BrugerFac.cs" />
-    <Compile Include="Factories\Forsiden.cs" />
     <Compile Include="Factories\IndholdFac.cs" />
     <Compile Include="Factories\KategoriFac.cs" />
     <Compile Include="Factories\KontaktFac.cs" />
     <Compile Include="Factories\KundeFac.cs" />
+    <Compile Include="Factories\NyhedsFac.cs" />
+    <Compile Include="Factories\OmFac.cs" />
     <Compile Include="Factories\OrdreFac.cs" />
     <Compile Include="Factories\ProduktFac.cs" />
     <Compile Include="Models\AdminTabel.cs" />
