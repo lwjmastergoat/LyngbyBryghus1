@@ -1,0 +1,28 @@
+﻿@* HOME KONTAKT *@
+
+@using LyngbyBrygRepo.Models
+@model KontaktTabel
+
+@{
+    ViewBag.Title = "Kontakt";
+    //Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>@Model.Overskrift</h2>
+<br />
+<p>
+    @Html.Raw(@Model.Tekst.Replace(Environment.NewLine, "<br />"))
+
+</p>
+<p>
+    @Model.Adresse<br />
+    @Model.Postnummer @Html.Raw(@Model.ByNavn.Replace(Environment.NewLine, "<br />"))
+</p>
+<p>
+    Email: <a href="mailto:@Model.Mailadresse">@Model.Mailadresse</a><br />
+    Telefon: <a href="tel:@Model.Mobil">@Model.Mobil</a>
+</p>
+<p>
+    <img src="@Model.Billede" alt="Kontaktbillede" />
+</p>
+
