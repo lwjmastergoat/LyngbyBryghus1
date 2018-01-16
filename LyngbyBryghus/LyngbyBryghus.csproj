@@ -110,10 +110,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Site.css" />
+    <Content Include="Content\CSS\font-awesome.css" />
+    <Content Include="Content\CSS\font-awesome.min.css" />
+    <Content Include="Content\CSS\mainlayout.css" />
+    <Content Include="Content\Images\Generelt\lyngbybryghuslogoskriftblack-min.png" />
+    <Content Include="Content\Scripts\jquery-3.2.1.js" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\Norse-Bold.svg" />
     <Content Include="Global.asax" />
     <Content Include="packages.config" />
     <Content Include="Content\CSS\bootstrap-grid.css.map" />
@@ -135,6 +139,17 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Views\Shared\_MainLayout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="fonts\Norse-Bold.otf" />
+    <Content Include="fonts\Norse.otf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\Norse-Bold.eot" />
+    <Content Include="fonts\Norse-Bold.ttf" />
+    <Content Include="fonts\Norse-Bold.woff" />
+    <Content Include="Views\Home\Kontakt.cshtml" />
     <Content Include="Views\Shared\_CMSLayout.cshtml" />
     <Content Include="Views\Shared\_LoginMain.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
@@ -172,10 +187,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModels\BestillingOptions.cs" />
-    <Compile Include="ViewModels\ForsideOptions.cs" />
-    <Compile Include="ViewModels\KontaktOptions.cs" />
-    <Compile Include="ViewModels\NyhederOptions.cs" />
+    <Compile Include="ViewModels\Bestilling.cs" />
+    <Compile Include="ViewModels\Forsiden.cs" />
+    <Compile Include="ViewModels\Kontakt.cs" />
+    <Compile Include="ViewModels\Nyheder.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -201,7 +216,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>16886</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
