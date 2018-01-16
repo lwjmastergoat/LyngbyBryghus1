@@ -7,7 +7,7 @@ using Duser;
 
 namespace LyngbyBrygRepo
 {
-    public class ProduktTabel
+    public class ProduktTabellen
     {
         public int ID { get; set; }
         public int KategoriID { get; set; }

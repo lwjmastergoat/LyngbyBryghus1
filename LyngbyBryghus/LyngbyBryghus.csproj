@@ -166,10 +166,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModels\BestillingOptions.cs" />
-    <Compile Include="ViewModels\ForsideOptions.cs" />
-    <Compile Include="ViewModels\KontaktOptions.cs" />
-    <Compile Include="ViewModels\NyhederOptions.cs" />
+    <Compile Include="ViewModels\Bestilling.cs" />
+    <Compile Include="ViewModels\Forsiden.cs" />
+    <Compile Include="ViewModels\Kontakt.cs" />
+    <Compile Include="ViewModels\Nyheder.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
