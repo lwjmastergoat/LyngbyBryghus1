@@ -12,6 +12,7 @@ namespace LyngbyBryghus.Controllers
     public class HomeController : Controller
     {
         // GET: Home
+        KontaktFac kf = new KontaktFac();
         public ActionResult Index()
         {
             return View();
@@ -22,6 +23,11 @@ namespace LyngbyBryghus.Controllers
         public ActionResult Produkter()
         {
             return View(Pf.GetProducts());
+        }
+
+        public ActionResult Kontakt()
+        {
+            return View(kf.Get(1));
         }
 
 
