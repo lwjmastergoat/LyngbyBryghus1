@@ -43,6 +43,7 @@
     <Compile Include="DDMF\AutoFac.cs" />
     <Compile Include="DDMF\Conn.cs" />
     <Compile Include="DDMF\Mapper.cs" />
+    <Compile Include="Factories\AdminFac.cs" />
     <Compile Include="Factories\BrugerFac.cs" />
     <Compile Include="Factories\IndholdFac.cs" />
     <Compile Include="Factories\KategoriFac.cs" />
