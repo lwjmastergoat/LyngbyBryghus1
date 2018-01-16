@@ -135,6 +135,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Views\Shared\_MainLayout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="fonts\Norse-Bold.otf" />
+    <Content Include="fonts\Norse.otf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
