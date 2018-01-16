@@ -11,7 +11,7 @@ namespace LyngbyBrygRepo.Factories
     public class OrdreFac:AutoFac<OrdreDetaljerTabel>
     {
 
-        public List<OrdreDetaljerTabel> GetAll()
+        public List<OrdreDetaljerTabel> GetOrders()
 
             //Henter alle ordre ud fra ID, (Bruger ID), så brugeren kan gå ind og se samtlige  ordre de har placeret.
         {

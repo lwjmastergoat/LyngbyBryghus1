@@ -3,22 +3,47 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Duser;
 using LyngbyBrygRepo.Factories;
+using LyngbyBrygRepo.Models;
 
 namespace LyngbyBryghus.Controllers
 {
     public class HomeController : Controller
     {
-        KontaktFac kf = new KontaktFac();
         // GET: Home
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult Kontakt()
+        ProduktFac Pf = new ProduktFac();
+
+        public ActionResult Produkter()
         {
-            return View(kf.Get(1));
+            return View(Pf.GetProducts());
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }

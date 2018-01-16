@@ -8,20 +8,20 @@ using Duser;
 
 namespace LyngbyBrygRepo.Factories
 {
-    public class ProduktFac:AutoFac<ProduktTabel>
+    public class ProduktFac:AutoFac<ProduktTabellen>
     {
-        public List<ProduktTabel> GetAll()
+        public List<ProduktTabellen> GetProducts()
         {
             String SQL = "SELECT ProduktTabellen.Navn, Beskrivelse, Billede, Pris, Alkohol, Farve, Bitterhed, Gærtype, KategoriTabel.Navn FROM ProduktTabellen JOIN KategoriTabel on ProduktTabellen.KategoriID = KategoriTabel.ID";
 
-            return ExecuteSQL<ProduktTabel>(SQL);
+            return ExecuteSQL<ProduktTabellen>(SQL);
         }
 
-        public List<ProduktTabel> GetBy()
+        public List<ProduktTabellen> GetBy()
         {
             String SQL = "SELECT ProduktTabellen.Navn, Beskrivelse, Billede, Pris, Alkohol, Farve, Bitterhed, Gærtype, KategoriTabel.Navn FROM ProduktTabellen JOIN KategoriTabel on ProduktTabellen.KategoriID = KategoriTabel.ID WHERE KategoriTabel.ID =" + "@ID";
 
-            return ExecuteSQL<ProduktTabel>(SQL);
+            return ExecuteSQL<ProduktTabellen>(SQL);
         }
         
 

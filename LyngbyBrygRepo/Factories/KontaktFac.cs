@@ -10,5 +10,8 @@ namespace LyngbyBrygRepo.Factories
 {
     public class KontaktFac : AutoFac<KontaktTabel>
     {
+
+        // Skal i princippet kun spytte kontakt informationerne ud fra databasen.
+
     }
 }
