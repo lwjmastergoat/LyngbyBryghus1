@@ -16,6 +16,7 @@
         url('../../fonts/Norse-Bold.svg') format('svg'), 
         url('../../fonts/Norse-Bold.ttf') format('truetype');
 }
+
 section, footer {
     font-size: 24px;
 }
