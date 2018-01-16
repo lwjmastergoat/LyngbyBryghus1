@@ -44,6 +44,7 @@
     <Compile Include="DDMF\Conn.cs" />
     <Compile Include="DDMF\Mapper.cs" />
     <Compile Include="Factories\BrugerFac.cs" />
+    <Compile Include="Factories\Forsiden.cs" />
     <Compile Include="Factories\IndholdFac.cs" />
     <Compile Include="Factories\KategoriFac.cs" />
     <Compile Include="Factories\KontaktFac.cs" />

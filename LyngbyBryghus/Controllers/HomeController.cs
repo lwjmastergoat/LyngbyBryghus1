@@ -17,8 +17,12 @@ namespace LyngbyBryghus.Controllers
             return View();
         }
 
-       
+        ProduktFac Pf = new ProduktFac();
 
+        public ActionResult Produkter()
+        {
+            return View(Pf.GetProducts());
+        }
 
 
 
