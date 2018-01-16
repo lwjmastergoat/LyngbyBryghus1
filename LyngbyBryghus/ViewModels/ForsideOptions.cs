@@ -5,7 +5,7 @@ using System.Web;
 using LyngbyBrygRepo.Models;
 using LyngbyBrygRepo;
 
-namespace lyngbybryghys
+namespace LyngbyBryghus
 {
     public class ForsideOptions
     {

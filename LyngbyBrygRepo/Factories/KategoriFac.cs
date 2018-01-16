@@ -8,7 +8,7 @@ using Duser;
 
 namespace LyngbyBrygRepo.Factories
 {
-    public class KategoriFac: AutoFac<ProduktTabel>
+    public class KategoriFac: AutoFac<ProduktTabellen>
     {
         KategoriFac Kf = new KategoriFac();
 

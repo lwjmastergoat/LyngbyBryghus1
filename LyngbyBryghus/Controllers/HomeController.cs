@@ -20,5 +20,10 @@ namespace LyngbyBryghus.Controllers
         {
             return View(kf.Get(1));
         }
+
+        public ActionResult Bestilling()
+        {
+            return View();
+        }
     }
 }
