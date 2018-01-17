@@ -9,6 +9,8 @@ namespace LyngbyBrygRepo.Models
 {
     public class OmTabel
     {
+        public int ID { get; set; }
+
         public string Overskrift { get; set; }
 
         public string Indhold { get; set; }
