@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Duser;
 using LyngbyBrygRepo.Factories;
 using LyngbyBrygRepo.Models;
+using LyngbyBrygRepo;
 
 namespace LyngbyBryghus.Controllers
 {
