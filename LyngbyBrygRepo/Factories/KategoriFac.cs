@@ -10,12 +10,6 @@ namespace LyngbyBrygRepo.Factories
 {
     public class KategoriFac: AutoFac<KategoriTabel>
     {
-     
-
-
-
-
-
 
     }
 }

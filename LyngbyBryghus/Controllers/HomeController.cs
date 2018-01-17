@@ -7,6 +7,7 @@ using Duser;
 using LyngbyBrygRepo.Factories;
 using LyngbyBrygRepo.Models;
 using LyngbyBrygRepo;
+using LyngbyBryghus.ViewModels;
 
 namespace LyngbyBryghus.Controllers
 {
@@ -14,16 +15,22 @@ namespace LyngbyBryghus.Controllers
     {
         // GET: Home
         OmFac Of = new OmFac();
+        ProduktFac Pf = new ProduktFac();
+        KontaktFac kf = new KontaktFac();
+        NyhedsFac nf = new NyhedsFac();
 
         public ActionResult Index()
         {
-            return View(Of.GetAll());
+            Forsiden Forsiden = new Forsiden();
+            Forsiden.Nyheder = nf.GetAll();
+            
+            return View(Forsiden);
         }
 
         // Der skal være en Partial view (sandsynligvis), hvor nyhederne kan være, da der ikke kan være 2 return.
 
 
-        ProduktFac Pf = new ProduktFac();
+        
 
         public ActionResult Produkter()
         {
