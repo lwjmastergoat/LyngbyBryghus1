@@ -10,7 +10,7 @@ using System.Data.SqlClient;
 
 namespace LyngbyBrygRepo.Factories
 {
-    public class AdminFac
+    public class AdminFac : AutoFac<AdminTabel>
     {
 
         public AdminTabel Login(string Navn, string Password)

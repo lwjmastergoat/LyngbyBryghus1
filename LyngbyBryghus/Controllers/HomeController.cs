@@ -23,8 +23,8 @@ namespace LyngbyBryghus.Controllers
         public ActionResult Index()
         {    
             Forsiden.Nyheder = nf.GetAll();
-            Forsiden.Overskrift = Of.Get(1).ToString();
-            Forsiden.Indhold = Of.Get(1).ToString();
+            Forsiden.Overskrift = Of.Get(1).Overskrift;
+            Forsiden.Indhold = Of.Get(1).Indhold;
 
             return View(Forsiden);
         }
