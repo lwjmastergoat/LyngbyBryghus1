@@ -8,9 +8,13 @@ using LyngbyBrygRepo.Models;
 
 namespace LyngbyBrygRepo.Factories
 {
-    public class OmFac:AutoFac<OmTabel>
+
+
+    public class OmFac : AutoFac<OmTabel>
     {
-        
+        String SQL = "SELECT * FROM OmTabel";
+
+        return 
 
     }
 }

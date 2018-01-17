@@ -18,19 +18,18 @@ namespace LyngbyBryghus.Controllers
         ProduktFac Pf = new ProduktFac();
         KontaktFac kf = new KontaktFac();
         NyhedsFac nf = new NyhedsFac();
+        Forsiden Forsiden = new Forsiden();
 
         public ActionResult Index()
-        {
-            Forsiden Forsiden = new Forsiden();
+        {    
             Forsiden.Nyheder = nf.GetAll();
-            
+            Forsiden.Overskrift = Of.Get(1).ToString();
+            Forsiden.Indhold = Of.Get(1).ToString();
+
             return View(Forsiden);
         }
 
-        // Der skal være en Partial view (sandsynligvis), hvor nyhederne kan være, da der ikke kan være 2 return.
 
-
-        
 
         public ActionResult Produkter()
         {
