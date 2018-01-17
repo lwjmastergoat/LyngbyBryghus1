@@ -17,7 +17,6 @@
 {
     <h3>@item.Navn</h3> <br />
     
-    
     <p><b>@item.KategoriTabelNavn</b></p>
     
     <p><b>@item.Alkohol - @item.Bitterhed IBU - @item.Farve EBC - @item.Gærtype </b></p>
@@ -27,6 +26,6 @@
 
     <p>@item.Pris Kroner</p>
 
-    <img src=~/Content/Images/"+ @item.Billede alt="Produktbillede" />
+    <img src="~/Content/Images/@item.Billede"  alt="Produktbillede" />
 
 }

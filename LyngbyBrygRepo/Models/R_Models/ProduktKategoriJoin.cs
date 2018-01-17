@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Duser;
 using System.Web;
 using LyngbyBrygRepo.Models;
+using LyngbyBrygRepo;
 
 namespace LyngbyBrygRepo.Models
 {
