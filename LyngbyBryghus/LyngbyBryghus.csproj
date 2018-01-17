@@ -155,6 +155,7 @@
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Areas\CMS\Views\web.config" />
     <Content Include="Areas\CMS\Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Bestilling.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -196,7 +197,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\CMS\Models\" />
     <Folder Include="Areas\CMS\Views\Shared\" />
-    <Folder Include="Content\Images\Generelt\" />
     <Folder Include="Content\Images\Produkter\" />
   </ItemGroup>
   <ItemGroup>

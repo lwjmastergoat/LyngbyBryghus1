@@ -1,0 +1,164 @@
+﻿
+@{
+    ViewBag.Title = "Bestilling";
+    //Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<div class="container">
+    <section class="row">
+        <div class="col-md-12">
+            <h2>Bestilling</h2>
+        </div>
+    </section>
+
+    <section class="row">
+        <div class="col-md-5">
+            <h4>Her kan du bestille øl</h4>
+            <hr />
+        </div>
+    </section>
+
+    <section class="row">
+        <div class="col-md-12">
+            <h4>Jeg ønsker 4 selvvalgte øl</h4>
+        </div>
+    </section>
+
+    <section class="row">
+        <div class="col-md-8">
+            <form method="post" action="/Home/Index/">
+                <select name="choice1" style="width: 300px;">
+                    <option value="Valg1">Valg 1</option>
+                    <option value="Valg2">Valg 2</option>
+                    <option value="Valg3">Valg 3</option>
+                    <option value="Valg4">Valg 4</option>
+                </select>
+                <br />
+                <select name="choice2" style="width: 300px;">
+                    <option value="Valg1">Valg 1</option>
+                    <option value="Valg2">Valg 2</option>
+                    <option value="Valg3">Valg 3</option>
+                    <option value="Valg4">Valg 4</option>
+                </select>
+                <br />
+                <select name="choice3" style="width: 300px;">
+                    <option value="Valg1">Valg 1</option>
+                    <option value="Valg2">Valg 2</option>
+                    <option value="Valg3">Valg 3</option>
+                    <option value="Valg4">Valg 4</option>
+                </select>
+                <br />
+                <select name="choice4" style="width: 300px;">
+                    <option value="Valg1">Valg 1</option>
+                    <option value="Valg2">Valg 2</option>
+                    <option value="Valg3">Valg 3</option>
+                    <option value="Valg4">Valg 4</option>
+                </select>
+            </form>
+        </div>
+    </section>
+
+    <section class="row">
+        <div class="col-md-12">
+            <h4 style="text-align: right;">A' Prisen ... 225 kr</h4>
+            <hr />
+        </div>
+    </section>
+
+    <section class="row">
+        <div class="col-md-8">
+            <h4>Jeg ønsker bryggerens udvalgte</h4>
+        </div>
+    </section>
+
+    <section class="row">
+        <div class="col-md-8">
+            <form method="post" action="/Home/Index/">
+                <input type="checkbox" name="choice1" value="Lyse" /> Lyse øl
+                <input type="checkbox" name="choice2" value="Mørke" /> Mørke øl
+                <input type="checkbox" name="choice3" value="Mjød" /> Mjød øl<br />
+                <input type="checkbox" name="choice4" value="Røde" />  Røde øl
+                <input type="checkbox" name="choice5" value="Special" /> Special øl
+            </form>
+        </div>
+    </section>
+
+    <section class="row">
+        <div class="col-md-12">
+            <h4 style="text-align: right;">A' Prisen ... 225 kr</h4>
+            <hr />
+        </div>
+    </section>
+
+    <section class="row">
+        <div class="col-md-8">
+            <h4>Jeg ønsker bryggerens udvalgte på abonnement</h4>
+        </div>
+    </section>
+
+    <section class="row">
+        <div class="col-md-8">
+            <form method="post" action="/Home/Index/">
+                <input type="checkbox" name="choice1" value="Lyse" /> Lyse øl
+                <input type="checkbox" name="choice2" value="Mørke" /> Mørke øl
+                <input type="checkbox" name="choice3" value="Mjød" /> Mjød øl<br />
+                <input type="checkbox" name="choice4" value="Røde" />  Røde øl
+                <input type="checkbox" name="choice5" value="Special" /> Special øl
+            </form>
+        </div>
+    </section>
+
+    <section class="row">
+        <div class="col-md-12">
+            <h4 style="text-align: right;">A' Prisen ... 225 kr</h4>
+            <hr />
+        </div>
+    </section>
+
+    <section class="row">
+        <div class="col-md-8 center-block contactform">
+            <h4>Dine oplysninger</h4>
+            <form id="contact-form" method="post" action="contact.php" role="form">
+                <div class="messages"></div>
+                <div class="controls center-block">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="form_name">Navn *</label>
+                            <input id="form_name" type="text" name="name" class="form-control" placeholder="Indtast venligst dit navn *" required="required" data-error="Dit fulde navn skal udfyldes.">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="form_address">Adresse *</label>
+                            <input id="form_address" type="text" name="address" class="form-control" placeholder="Indtast venligst din adresse *">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="form_email">Mail *</label>
+                            <input id="form_email" type="email" name="email" class="form-control" placeholder="Indtast venligst din email *" required="required" data-error="Din email skal udfyldes">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="form_phone">Mobil *</label>
+                            <input id="form_phone" type="text" name="phone" class="form-control" placeholder="Indtast venligst dit mobilnummer *" required="required" data-error="Din email skal udfyldes">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <input type="submit" class="btn btn-outline-dark btn-send" value="Videre til betaling">
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </section>
+</div>
