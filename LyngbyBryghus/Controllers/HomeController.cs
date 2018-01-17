@@ -25,6 +25,11 @@ namespace LyngbyBryghus.Controllers
             return View(Pf.GetProducts());
         }
 
+        public ActionResult Bestilling()
+        {
+            return View();
+        }
+
         public ActionResult Kontakt()
         {
             return View(kf.Get(1));
