@@ -19,6 +19,7 @@ namespace LyngbyBryghus.Controllers
         KontaktFac kf = new KontaktFac();
         NyhedsFac nf = new NyhedsFac();
         Forsiden Forsiden = new Forsiden();
+        ProduktKategoriJoinFac pkjf = new ProduktKategoriJoinFac();
 
         public ActionResult Index()
         {    
@@ -31,7 +32,7 @@ namespace LyngbyBryghus.Controllers
 
         public ActionResult Produkter()
         {
-            return View(Pf.GetProducts());
+            return View(pkjf.GetProducts());
         }
 
         public ActionResult Bestilling()

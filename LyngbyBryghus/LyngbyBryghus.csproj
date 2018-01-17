@@ -156,6 +156,9 @@
     <Content Include="Areas\CMS\Views\web.config" />
     <Content Include="Areas\CMS\Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Bestilling.cshtml" />
+    <Content Include="Areas\CMS\Views\Admin\Index.cshtml" />
+    <Content Include="Areas\CMS\Views\Admin\AddNew.cshtml" />
+    <Content Include="Views\Home\Produkter.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -188,6 +191,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\FileTools.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\Bestilling.cs" />
     <Compile Include="ViewModels\Forsiden.cs" />
@@ -197,7 +201,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\CMS\Models\" />
-    <Folder Include="Areas\CMS\Views\Admin\" />
     <Folder Include="Areas\CMS\Views\Shared\" />
     <Folder Include="Content\Images\Produkter\" />
   </ItemGroup>
