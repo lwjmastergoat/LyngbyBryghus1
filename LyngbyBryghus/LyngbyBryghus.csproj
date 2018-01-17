@@ -158,6 +158,7 @@
     <Content Include="Views\Home\Bestilling.cshtml" />
     <Content Include="Areas\CMS\Views\Admin\Index.cshtml" />
     <Content Include="Areas\CMS\Views\Admin\AddNew.cshtml" />
+    <Content Include="Views\Home\Produkter.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

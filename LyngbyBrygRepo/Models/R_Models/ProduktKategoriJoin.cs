@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Duser;
 using System.Web;
 using LyngbyBrygRepo.Models;
+using LyngbyBrygRepo;
 
 namespace LyngbyBrygRepo.Models
 {
@@ -22,6 +23,14 @@ namespace LyngbyBrygRepo.Models
         public string Billede { get; set; }
 
         public decimal Pris { get; set; }
+
+        public decimal Alkohol { get; set; }
+
+        public int Farve { get; set; }
+
+        public int Bitterhed { get; set; }
+
+        public string Gærtype { get; set; }
 
         // Og fra kategori tabellen:
 

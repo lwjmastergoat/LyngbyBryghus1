@@ -23,10 +23,5 @@ namespace LyngbyBrygRepo.Models
 
         public string Image { get; set; }
 
-
-
-
-
-
     }
 }
