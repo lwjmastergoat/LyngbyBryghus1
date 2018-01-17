@@ -29,8 +29,6 @@ namespace LyngbyBryghus.Controllers
             return View(Forsiden);
         }
 
-
-
         public ActionResult Produkter()
         {
             return View(Pf.GetProducts());
