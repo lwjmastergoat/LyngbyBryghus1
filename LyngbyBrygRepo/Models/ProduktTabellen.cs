@@ -15,5 +15,12 @@ namespace LyngbyBrygRepo
         public string Beskrivelse { get; set; }
         public string Billede { get; set; }
         public decimal Pris { get; set; }
+
+        public decimal Alkohol { get; set; }
+        public int Farve { get; set; }
+        public int Bitterhed { get; set; }
+        public string Gærtype { get; set; }
+
+
     }
 }

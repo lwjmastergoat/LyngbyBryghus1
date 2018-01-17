@@ -1,5 +1,7 @@
-﻿@using LyngbyBrygRepo.Models.R_Models
+﻿@* HOME - Produkter *@
 
+@using LyngbyBrygRepo.Models
+@model ProduktKategoriJoin
 
 
 @{
@@ -7,6 +9,21 @@
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 
-<h2>Produkter</h2>
+<h2>Vores Øl</h2>
 
-@foreach(var in )
+@foreach(var item in Model.Navn)
+{
+    <h3>@Model.Navn</h3> Html.Raw("<br />");
+    
+    <p><b>@Model.KategoriTabelNavn</b></p>
+
+    <p><b>@Model.Alkohol - @Model.Bitterhed IBU - @Model.Farve EBC - @Model.Gærtype </b></p>
+
+
+    <p>@Model.Beskrivelse</p>
+
+    <p>@Model.Pris Kroner</p>
+
+    <img src=~/Content/Images/"+ @Model.Billede alt="Produktbillede" />
+
+}
