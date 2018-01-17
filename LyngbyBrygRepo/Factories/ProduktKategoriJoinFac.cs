@@ -15,7 +15,7 @@ namespace LyngbyBrygRepo
         // Finder alle produkter, Joiner med kategoritabellen, så kategorien på øllen også fremgør.
         public List<ProduktTabellen> GetProducts()
         {
-            String SQL = "SELECT ProduktTabellen.Navn, Beskrivelse, Billede, Pris, Alkohol, Farve, Bitterhed, Gærtype, KategoriTabel.Navn FROM ProduktTabellen JOIN KategoriTabel on ProduktTabellen.KategoriID = KategoriTabel.ID";
+            String SQL = "SELECT ProduktTabellen.ID, ProduktTabellen.Navn, Beskrivelse, Billede, Pris, Alkohol, Farve, Bitterhed, Gærtype, KategoriTabel.Navn, KategoriID, KategoriTabel.ID FROM ProduktTabellen JOIN KategoriTabel on ProduktTabellen.KategoriID = KategoriTabel.ID";
 
             return ExecuteSQL<ProduktTabellen>(SQL);
         }
