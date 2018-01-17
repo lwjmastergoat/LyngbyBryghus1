@@ -12,9 +12,6 @@ namespace LyngbyBrygRepo.Factories
 
     public class OmFac : AutoFac<OmTabel>
     {
-        String SQL = "SELECT * FROM OmTabel";
-
-        return 
 
     }
 }
