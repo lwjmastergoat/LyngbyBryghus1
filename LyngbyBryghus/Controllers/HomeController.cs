@@ -37,7 +37,7 @@ namespace LyngbyBryghus.Controllers
 
         public ActionResult Bestilling()
         {
-            return View();
+            return View(pkjf.GetProducts());
         }
 
         public ActionResult Kontakt()
