@@ -30,8 +30,6 @@ namespace LyngbyBryghus.Controllers
             return View(Forsiden);
         }
 
-
-
         public ActionResult Produkter()
         {
             return View(pkjf.GetProducts());
@@ -39,7 +37,7 @@ namespace LyngbyBryghus.Controllers
 
         public ActionResult Bestilling()
         {
-            return View();
+            return View(pkjf.GetProducts());
         }
 
         public ActionResult Kontakt()

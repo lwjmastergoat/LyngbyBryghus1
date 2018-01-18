@@ -15,18 +15,24 @@
 @foreach (var item in Model)
 
 {
-    <h3>@item.Navn</h3> <br />
-    
-    <p><b>@item.KategoriTabelNavn</b></p>
-    
-    <p><b>@item.Alkohol - @item.Bitterhed IBU - @item.Farve EBC - @item.Gærtype </b></p>
+    <h2>@item.Navn</h2> <br /> <br /> <br />
+
+    <p><b>Øltype: @item.KategoriensNavn </b></p> <br />
+
+    <p>
+        <b> Styrke: </b> @item.Alkohol % <br />
+        <b> Bitterhed: </b> @item.Bitterhed IBU <br />
+        <b> Farve: </b> @item.Farve EBC <br />
+        <b> Gærtype: </b> @item.Gaertype <br />
+        
+    </p>
 
 
     <p>@item.Beskrivelse</p>
 
     <p>@item.Pris Kroner</p>
 
-    <img src="~/Content/Images/@item.Billede"  alt="Produktbillede" />
+        <img src="~/Content/Images/@item.Billede" alt="Produktbillede" />
 
-    
+
 }
