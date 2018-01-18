@@ -27,7 +27,7 @@ namespace LyngbyBrygRepo.Models
         // Og fra kategori tabellen:
 
         //public int KategoriTabelID { get; set; }
-        public string KategoriTabelNavn { get; set; }
+        public string KategoriensNavn { get; set; }
 
 
 
