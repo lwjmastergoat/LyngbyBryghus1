@@ -13,11 +13,11 @@ namespace LyngbyBrygRepo
     {
 
         // Finder alle produkter, Joiner med kategoritabellen, så kategorien på øllen også fremgør.
-        public List<ProduktTabellen> GetProducts()
+        public List<ProduktKategoriJoin> GetProducts()
         {
-            String SQL = "SELECT ProduktTabellen.ID, ProduktTabellen.Navn, Beskrivelse, Billede, Pris, Alkohol, Farve, Bitterhed, Gærtype, KategoriTabel.Navn, KategoriID, KategoriTabel.ID FROM ProduktTabellen JOIN KategoriTabel on ProduktTabellen.KategoriID = KategoriTabel.ID";
+            String SQL = "SELECT ProduktTabellen.ID, KategoriID, ProduktTabellen.Navn, Beskrivelse, Billede, Pris, Alkohol, Gaertype, KategoriTabel.Navn AS 'KategoriensNavn' FROM ProduktTabellen INNER JOIN KategoriTabel ON ProduktTabellen.KategoriID = KategoriTabel.ID";
 
-            return ExecuteSQL<ProduktTabellen>(SQL);
+            return ExecuteSQL<ProduktKategoriJoin>(SQL);
         }
 
     }
