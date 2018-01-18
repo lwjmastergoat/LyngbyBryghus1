@@ -1,23 +1,49 @@
 ﻿
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_LoginMain.cshtml";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
+
+<style type="text/css">
+    input {
+        margin: 10px 0;
+        width: 300px;
+    }
+    button {
+        margin: 10px 0;
+    }
+</style>
 <div class="container">
-    <div class="row">
-        <div class="col-sm-12">
+    <section class="row">
+        <div class="col-sm-6">
+            <h2>Ny kunde</h2><br />
+            <p>
+                Opret dig som ny kunde og få adgang til forskellige funktioner som f.eks. din ordrehistorik m.m.
+            </p>
+            <p>
+                <button class="btn knap1" type="button">Opret dig som kunde</button>
+            </p>
+        </div>
+
+        <div class="col-sm-6">
             <div class="loginwrap d-block mx-auto">
-                <form class="text-center" method="post" action="/Login/Index/">
-                    <input type="text" class="input1" name="Navn" placeholder="Brugernavn" />
-                    <br />
-                    <input type="password" class="input2" name="Password" placeholder="Kodeord" />
-                    <br />
-                    <a href="/Home/Index"><button class="btn knap1" type="button">Tilbage</button></a>
-                    <button class="btn knap2" type="submit">Login</button>
-                    <br />
-                    @Html.Raw(ViewBag.Msg)
+                <h2>Login</h2><br />
+                <form method="post" action="/Login/Index/">
+                    <p>
+                        Her kan du logge dig ind, hvis du allerede er bruger<br />
+                        <input type="text" class="input1" name="Navn" placeholder="Brugernavn" required />
+                        <br />
+                        <input type="password" class="input2" name="Password" placeholder="Kodeord" required />
+                        <br />
+                        <button class="btn knap2" type="submit">Login</button>
+                        <button class="btn knap1" type="button">Glemt password</button><br />
+                        <a href="/Home/Index"><button class="btn knap1" type="button">Tilbage</button></a>
+
+                        <br />
+                        @Html.Raw(ViewBag.Msg)
+                    </p>
                 </form>
             </div>
         </div>
-    </div>
+    </section>
 </div>
