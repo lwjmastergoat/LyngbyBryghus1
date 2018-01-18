@@ -1,6 +1,11 @@
-﻿body {
+﻿
+
+
+/*#region Body */
+
+body {
     color: black;
-    font-family: Norse-Bold, Arial;
+    font-family: Arial, Helvetica, sans-serif;
     /*background-image: url('');*/
     background-size: cover;
     background-repeat: no-repeat;
@@ -16,21 +21,34 @@
         url('../../fonts/Norse-Bold.svg') format('svg'), 
         url('../../fonts/Norse-Bold.ttf') format('truetype');
 }
+
+h1,h2,h3,h4,h5,h6{
+    font-family:Norse-Bold;
+}
+
 .logo {
     max-height: 150px;
 }
 section, footer {
-    font-size: 24px;
+    font-size: 18px;
 }
 h1 {
     font-size: 2rem;
 }
+
+/*#endregion */
+
+
+/*#region Footer og Nav */
+
 nav {
     text-transform: uppercase;
     font-size: 20px;
 }
 a {
     color: black;
+    font-family:Norse-Bold;
+    font-size:25px;
 }
 .navbar-nav > li > a:hover {
     text-decoration: underline;
@@ -52,7 +70,7 @@ footer {
 .footeraddress {
     padding-top: 30px;
     text-align: center;
-/*}
+    /*
 svg {
     padding-left: 10px;
     display: inline-block;
@@ -60,5 +78,25 @@ svg {
     fill: white;
     -webkit-filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.9));
     filter: drop-shadow(-10px -10px 10px rgba(0,0,0,0.9));
-}*/
+}*/    }
+
+/*#endregion */
+
+
+/*#region Produkter */
+
+
+.maerkat{
+    float:right;
+    display:inline-block;
+}
+
+.bestil{
+ float:right;
+}
+
+
+
+/*#endregion */
+
 
