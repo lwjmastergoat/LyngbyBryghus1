@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "AddNew";
+    Layout = "~/Views/Shared/_CMSLayout.cshtml";
+}
+
+<h1>Tilføj Produkt</h1>
+<form method="post" action="/CMS/Produkt/AddNew/" enctype="multipart/form-data">
+    <label>Navn</label>
+    <br />
+    <input type="text" name="Navn" />
+    <br />
+    <label>Beskrivelse</label>
+    <br />
+    <textarea name="Beskrivelse"></textarea>
+    <br />
+    <label>Kategori ID</label>
+    <br />
+    <input type="text" name="KategoriID" />
+    <label>Billed</label>
+    <br />
+    <input type="file" name="Photo" />
+    <br />
+    <label>Pris</label>
+    <br />
+    <input type="text" name="Pris" />
+    <br />
+    <label>Alkohol</label>
+    <br />
+    <input type="text" name="Alkohol" />
+    <br />
+    <label>Farve</label>
+    <br />
+    <input type="text" name="Farve" />
+    <br />
+    <label>Bitterhed</label>
+    <br />
+    <input type="text" name="Bitterhed" />
+    <br />
+    <label>Gærtype</label>
+    <br />
+    <input type="text" name="Gaertype" />
+    <br />
+    <button type="submit">Opret artikel</button>
+</form>

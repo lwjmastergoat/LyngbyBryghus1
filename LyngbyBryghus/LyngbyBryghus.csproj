@@ -112,6 +112,7 @@
   <ItemGroup>
     <Content Include="Content\CSS\font-awesome.css" />
     <Content Include="Content\CSS\font-awesome.min.css" />
+    <Content Include="Content\CSS\loginmainlayout.css" />
     <Content Include="Content\CSS\mainlayout.css" />
     <Content Include="Content\Images\Generelt\lyngbybryghuslogoskriftblack-min.png" />
     <Content Include="Content\Scripts\jquery-3.2.1.js" />
@@ -159,6 +160,8 @@
     <Content Include="Areas\CMS\Views\Admin\Index.cshtml" />
     <Content Include="Areas\CMS\Views\Admin\AddNew.cshtml" />
     <Content Include="Views\Home\Produkter.cshtml" />
+    <Content Include="Areas\CMS\Views\Admin\Edit.cshtml" />
+    <Content Include="Areas\CMS\Views\Produkt\AddNew.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -186,6 +189,7 @@
     <Compile Include="Areas\CMS\CMSAreaRegistration.cs" />
     <Compile Include="Areas\CMS\Controllers\AdminController.cs" />
     <Compile Include="Areas\CMS\Controllers\HomeController.cs" />
+    <Compile Include="Areas\CMS\Controllers\ProduktController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
