@@ -22,7 +22,7 @@ namespace LyngbyBryghus.Controllers
         ProduktKategoriJoinFac pkjf = new ProduktKategoriJoinFac();
 
         public ActionResult Index()
-        {    
+        {
             Forsiden.Nyheder = nf.GetAll();
             Forsiden.Overskrift = Of.Get(1).Overskrift;
             Forsiden.Indhold = Of.Get(1).Indhold;
@@ -44,26 +44,6 @@ namespace LyngbyBryghus.Controllers
         {
             return View(kf.Get(1));
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     }

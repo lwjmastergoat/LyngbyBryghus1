@@ -191,8 +191,6 @@
     <Compile Include="Areas\CMS\Controllers\HomeController.cs" />
     <Compile Include="Areas\CMS\Controllers\ProduktController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Content\HomeController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
