@@ -112,6 +112,7 @@
   <ItemGroup>
     <Content Include="Content\CSS\font-awesome.css" />
     <Content Include="Content\CSS\font-awesome.min.css" />
+    <Content Include="Content\CSS\loginmainlayout.css" />
     <Content Include="Content\CSS\mainlayout.css" />
     <Content Include="Content\Images\Generelt\lyngbybryghuslogoskriftblack-min.png" />
     <Content Include="Content\Scripts\jquery-3.2.1.js" />
@@ -190,6 +191,7 @@
     <Compile Include="Areas\CMS\Controllers\HomeController.cs" />
     <Compile Include="Areas\CMS\Controllers\ProduktController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Content\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
