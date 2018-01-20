@@ -1,8 +1,9 @@
 ﻿@* HOME - ProduktDetaljer *@
 
 @using LyngbyBrygRepo.Models;
+@using LyngbyBrygRepo.Models.R_Models;
 @using LyngbyBrygRepo;
-@model List<ProduktKategoriJoin>
+@model ProduktKategoriJoin
 
 
 @{
@@ -12,21 +13,22 @@
 
 <div class="row">
     <div class="col-md-8 offset-md-2"></div>
-    <h2>ProduktDetaljer</h2>
+    <h2>@Model.Navn</h2>
+
 
 
     <p>
-        <b>Øltype:</b> @KategoriensNavn<br />
-        <b> Styrke: </b> @Alkohol % <br />
-        <b> Bitterhed: </b> @item.Bitterhed IBU <br />
-        <b> Farve: </b> @item.Farve EBC <br />
-        <b> Gærtype: </b> @item.Gaertype <br />
+        <b>Øltype:</b> @Model.KategoriensNavn<br />
+        <b> Styrke: </b> @Model.Alkohol % <br />
+        <b> Bitterhed: </b> @Model.Bitterhed IBU <br />
+        <b> Farve: </b> @Model.Farve EBC <br />
+        <b> Gærtype: </b> @Model.Gaertype <br />
 
     </p>
 
 
-    <p>@item.Beskrivelse</p>
+    <p>@Model.Beskrivelse</p>
 
-    <p><b>@item.Pris kr.</b></p>
+    <p><b>@Model.Pris kr.</b></p>
     <button class="bestil btn btn-dark">Bestilling her</button>
 </div>
