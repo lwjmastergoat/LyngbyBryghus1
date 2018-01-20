@@ -1,0 +1,29 @@
+﻿@* HOME - ProduktDetaljer *@
+
+@using LyngbyBrygRepo.Models;
+@using LyngbyBrygRepo;
+@model List<ProduktKategoriJoin>
+
+
+@{
+    ViewBag.Title = "ProduktDetaljer";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>ProduktDetaljer</h2>
+
+
+<p>
+    <b>Øltype:</b> @item.KategoriensNavn<br />
+    <b> Styrke: </b> @item.Alkohol % <br />
+    <b> Bitterhed: </b> @item.Bitterhed IBU <br />
+    <b> Farve: </b> @item.Farve EBC <br />
+    <b> Gærtype: </b> @item.Gaertype <br />
+
+</p>
+
+
+<p>@item.Beskrivelse</p>
+
+<p><b>@item.Pris kr.</b></p>
+<button class="bestil btn btn-dark">Bestilling her</button>

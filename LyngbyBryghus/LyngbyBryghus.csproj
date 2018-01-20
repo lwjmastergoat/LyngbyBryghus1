@@ -165,6 +165,7 @@
     <Content Include="Areas\CMS\Views\Nyheds\Index.cshtml" />
     <Content Include="Areas\CMS\Views\Produkt\Index.cshtml" />
     <Content Include="Areas\CMS\Views\Produkt\Edit.cshtml" />
+    <Content Include="Views\Home\ProduktDetaljer.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -17,24 +17,11 @@
 
         @foreach (var item in Model)
         {
-            <div class="col-md-6">
+            <div class="col-md-3">
                 <h3>@item.Navn</h3> <br />
-                <img class="maerkat" src="~/Content/Images/@item.Billede" alt="Produktbillede" />
+                <a href="~/Views/Home/ProduktDetaljer.cshtml/@item.ID"> <img class="maerkat" src="~/Content/Images/@item.Billede" alt="Produktbillede" /> </a>
 
-                <p>
-                    <b>Øltype:</b> @item.KategoriensNavn<br />
-                    <b> Styrke: </b> @item.Alkohol % <br />
-                    <b> Bitterhed: </b> @item.Bitterhed IBU <br />
-                    <b> Farve: </b> @item.Farve EBC <br />
-                    <b> Gærtype: </b> @item.Gaertype <br />
-
-                </p>
-
-
-                <p>@item.Beskrivelse</p>
-
-                <p><b>@item.Pris kr.</b></p>
-                <button class="bestil btn btn-dark">Tilføj til bestilling</button>
+                <button class="btn btn-dark"> Se mere </button>
             </div>
         }
     </div>
