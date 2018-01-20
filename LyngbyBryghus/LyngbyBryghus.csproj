@@ -162,6 +162,9 @@
     <Content Include="Views\Home\Produkter.cshtml" />
     <Content Include="Areas\CMS\Views\Admin\Edit.cshtml" />
     <Content Include="Areas\CMS\Views\Produkt\AddNew.cshtml" />
+    <Content Include="Areas\CMS\Views\Nyheds\Index.cshtml" />
+    <Content Include="Areas\CMS\Views\Produkt\Index.cshtml" />
+    <Content Include="Areas\CMS\Views\Produkt\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -189,6 +192,7 @@
     <Compile Include="Areas\CMS\CMSAreaRegistration.cs" />
     <Compile Include="Areas\CMS\Controllers\AdminController.cs" />
     <Compile Include="Areas\CMS\Controllers\HomeController.cs" />
+    <Compile Include="Areas\CMS\Controllers\NyhedsController.cs" />
     <Compile Include="Areas\CMS\Controllers\ProduktController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -206,6 +210,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\CMS\Models\" />
     <Folder Include="Areas\CMS\Views\Shared\" />
+    <Folder Include="Content\Images\Nyheder\" />
     <Folder Include="Content\Images\Produkter\" />
   </ItemGroup>
   <ItemGroup>

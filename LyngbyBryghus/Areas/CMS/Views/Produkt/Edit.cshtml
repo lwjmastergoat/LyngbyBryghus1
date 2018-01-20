@@ -1,0 +1,73 @@
+﻿@using LyngbyBrygRepo
+@model ProduktTabellen
+
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_CMSLayout.cshtml";
+}
+
+
+<form method="post" action="/CMS/Produkt/Edit/" enctype="multipart/form-data">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2 class="headlineh2">Navn</h2>
+                <br />
+                <input type="text" name="Navn" class="inputs hdinput" value="@Model.Navn" />
+                <br />
+                <h2>Beskrivelse</h2>
+                <br />
+                <textarea class="inputs" name="Main">@Model.Beskrivelse</textarea>
+                <h2 class="headlineh2">Kategori</h2>
+                <br />
+                <input type="text" name="KategoriID" class="inputs hdinput" value="@Model.KategoriID" />
+                <br />
+                <h2 class="headlineh2">Pris</h2>
+                <br />
+                <input type="text" name="Pris" class="inputs hdinput" value="@Model.Pris" />
+                <br />
+                <h2 class="headlineh2">Alkohol</h2>
+                <br />
+                <input type="text" name="Navn" class="inputs hdinput" value="@Model.Alkohol" />
+                <br />
+                <h2 class="headlineh2">Farve</h2>
+                <br />
+                <input type="text" name="Farve" class="inputs hdinput" value="@Model.Farve" />
+                <br />
+                <h2 class="headlineh2">Bitterhed</h2>
+                <br />
+                <input type="text" name="Bitterhed" class="inputs hdinput" value="@Model.Bitterhed" />
+                <br />
+                <h2 class="headlineh2">Gærtypen</h2>
+                <br />
+                <input type="text" name="Gaertype" class="inputs hdinput" value="@Model.Gaertype" />
+                <br />
+
+            </div>
+            <div class="col-sm-6">
+                <h2>New Picture</h2>
+                <br />
+                <input type="file" class="roleselect" name="Photo" />
+                <br />
+                <input type="hidden" value="@Model.ID" name="ID" />
+                <br />
+
+
+                @if (Model.Billede != null)
+                {
+                    <h2 class="currentimg"> Current Picture </h2>
+                    <img src="~/ArticleImages/@Model.Billede" width="300" />
+                    <br />
+
+                }
+
+            </div>
+
+            <div class="col-sm-12">
+                <button type="submit">Edit Produkt</button>
+            </div>
+        </div>
+    </div>
+</form>
+

@@ -26,7 +26,7 @@ namespace LyngbyBryghus.Areas.CMS.Controllers
             {
                 return Redirect("/Login");
             }
-            return View();
+            return View(pf.GetAll());
         }
         public ActionResult AddNew()
         {
@@ -56,6 +56,77 @@ namespace LyngbyBryghus.Areas.CMS.Controllers
 
 
             pf.Insert(input);
+
+            return Redirect("/CMS/Produkt");
+        }
+
+        public ActionResult Delete(int ID)
+        {
+            if (Session["rolle"] == null || (int)Session["rolle"] < Editor)
+            {
+                return Redirect("/CMS/Produkt");
+            }
+
+
+
+            ProduktTabellen produkt = pf.Get(ID);
+
+            if (produkt.Billede != null)
+            {
+                string imagePath = Request.PhysicalApplicationPath + "/Content/Images/Produkter/" + produkt.Billede;
+
+                if (System.IO.File.Exists(imagePath))
+                {
+                    System.IO.File.Delete(imagePath);
+                }
+            }
+
+            pf.Delete(ID);
+
+            return Redirect("/CMS/Produkt");
+        }
+
+        public ActionResult Edit(int ID)
+        {
+            if (Session["rolle"] == null || (int)Session["rolle"] < Editor)
+            {
+                return Redirect("/CMS/Produkt");
+            }
+
+            return View(pf.Get(ID));
+        }
+
+        [HttpPost]
+        public ActionResult Edit(ProduktTabellen input, HttpPostedFileBase Photo)
+        {
+            if (Session["rolle"] == null || (int)Session["rolle"] < Editor)
+            {
+                return Redirect("/CMS/Produkt");
+            }
+
+
+            input.Billede = null;
+
+            if (Photo != null)
+            {
+                ProduktTabellen produkt = pf.Get(input.ID);
+
+                if (produkt.Billede != null)
+                {
+                    string imagePath = Request.PhysicalApplicationPath + "/Content/Images/Produkter/" + produkt.Billede;
+
+                    if (System.IO.File.Exists(imagePath))
+                    {
+                        System.IO.File.Delete(imagePath);
+                    }
+
+                }
+                string newImagePath = Request.PhysicalApplicationPath + "/Content/Images/Produkter/";
+                input.Billede = ft.ImageUpload(Photo, newImagePath);
+            }
+
+            pf.Update(input);
+
 
             return Redirect("/CMS/Produkt");
         }

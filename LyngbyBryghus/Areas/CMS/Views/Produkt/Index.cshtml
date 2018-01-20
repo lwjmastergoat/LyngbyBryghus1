@@ -1,0 +1,56 @@
+﻿@using LyngbyBrygRepo
+@model List<ProduktTabellen>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_CMSLayout.cshtml";
+}
+
+
+<table>
+    <thead>
+        <tr>
+            <td>Kategori</td>
+            <td>Navn</td>
+            <td>Beskrivelse</td>
+            <td>Billede</td>
+            <td>Pris</td>
+            <td>Alkohol</td>
+            <td>Farve</td>
+            <td>Bitterhed</td>
+            <td>Gærtype</td>
+            <td>Fjern</td>
+            <td>Rediger</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.KategoriID</td>
+                <td>@item.Navn</td>
+                <td>@item.Beskrivelse</td>
+                <td>@item.Billede</td>
+                <td>@item.Pris</td>
+                <td>@item.Alkohol</td>
+                <td>@item.Farve</td>
+                <td>@item.Bitterhed</td>
+                <td>@item.Gaertype</td>
+                <td class="remove">
+                    @if ((int)Session["rolle"] >= 1)
+                {
+                        <a href="/CMS/Produkt/Delete/@item.ID"><button class="btn alert-danger">Remove</button></a>
+                    }
+                </td>
+
+                <td class="rediger">
+                    @if ((int)Session["rolle"] >= 1)
+                {
+                        <a href="/CMS/Produkt/Edit/@item.ID"><button class="btn alert-primary">Edit</button></a>
+                    }
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
