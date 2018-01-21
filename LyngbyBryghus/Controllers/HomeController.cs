@@ -20,6 +20,8 @@ namespace LyngbyBryghus.Controllers
         NyhedsFac nf = new NyhedsFac();
         Forsiden Forsiden = new Forsiden();
         ProduktKategoriJoinFac pkjf = new ProduktKategoriJoinFac();
+        ProduktDetaljerFac pdf = new ProduktDetaljerFac();
+
 
         public ActionResult Index()
         {
@@ -44,6 +46,28 @@ namespace LyngbyBryghus.Controllers
         {
             return View(kf.Get(1));
         }
+
+        public ActionResult Details(int ID=0)
+        {
+            if(ID != 0)
+            {
+                try
+                {
+                    return View(pdf.GetDetails(ID));
+                }
+
+                catch
+                {
+                    return Redirect("/Home/Index/");
+                }
+            }
+
+            else
+            {
+                return Redirect("/Home/Index/");
+            }
+        }
+
 
 
     }

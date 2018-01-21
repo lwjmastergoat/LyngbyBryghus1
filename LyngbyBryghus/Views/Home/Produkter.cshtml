@@ -18,10 +18,10 @@
         @foreach (var item in Model)
         {
             <div class="col-md-3">
-                <h3>@item.Navn</h3> <br />
-                <a href="~/Views/Home/ProduktDetaljer.cshtml/@item.ID"> <img class="maerkat" src="~/Content/Images/Produkter/@item.Billede" alt="Produktbillede" /> </a>
+               <h3>@item.Navn</h3> <br />
+                <img class="maerkat" src="~/Content/Images/Produkter/@item.Billede" alt="Produktbillede" /> <br />
 
-                <button class="btn btn-dark"> Se mere </button>
+               <button onclick="~/Views/Home/ProduktDetaljer.cshtml/@item.ID" class="btn btn-block btn-dark"> Se mere </button>
             </div>
         }
     </div>

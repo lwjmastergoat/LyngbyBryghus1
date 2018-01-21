@@ -80,6 +80,7 @@
     <Compile Include="Factories\NyhedsFac.cs" />
     <Compile Include="Factories\OmFac.cs" />
     <Compile Include="Factories\OrdreFac.cs" />
+    <Compile Include="Factories\ProduktDetaljerFac.cs" />
     <Compile Include="Factories\ProduktFac.cs" />
     <Compile Include="Factories\ProduktKategoriJoinFac.cs" />
     <Compile Include="Models\AdminTabel.cs" />
