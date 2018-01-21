@@ -118,7 +118,31 @@
     <Content Include="Content\CSS\mainlayout.css" />
     <Content Include="Content\Images\CMS\blue_white_spots_background_65560_1920x1080.jpg" />
     <Content Include="Content\Images\CMS\white-background-5.jpg" />
+    <Content Include="Content\Images\Generelt\baggrund3.jpg" />
     <Content Include="Content\Images\Generelt\lyngbybryghuslogoskriftblack-min.png" />
+    <Content Include="Content\Images\Produkter\201801181244035.png" />
+    <Content Include="Content\Images\Produkter\201801181253504.png" />
+    <Content Include="Content\Images\Produkter\201801200947577.png" />
+    <Content Include="Content\Images\Produkter\201801200959444.png" />
+    <Content Include="Content\Images\Produkter\201801201000045.png" />
+    <Content Include="Content\Images\Produkter\201801201000200.png" />
+    <Content Include="Content\Images\Produkter\201801201000302.png" />
+    <Content Include="Content\Images\Produkter\201801201000403.png" />
+    <Content Include="Content\Images\Produkter\201801201001538.png" />
+    <Content Include="Content\Images\Produkter\201801201002103.png" />
+    <Content Include="Content\Images\Produkter\201801201002204.png" />
+    <Content Include="Content\Images\Produkter\201801201002318.png" />
+    <Content Include="Content\Images\Produkter\201801201002464.png" />
+    <Content Include="Content\Images\Produkter\201801201002578.png" />
+    <Content Include="Content\Images\Produkter\201801201003069.png" />
+    <Content Include="Content\Images\Produkter\201801201003162.png" />
+    <Content Include="Content\Images\Produkter\201801201003299.png" />
+    <Content Include="Content\Images\Produkter\201801201003402.png" />
+    <Content Include="Content\Images\Produkter\201801201003505.png" />
+    <Content Include="Content\Images\Produkter\201801201003598.png" />
+    <Content Include="Content\Images\Produkter\201801201004134.png" />
+    <Content Include="Content\Images\Produkter\201801201004273.png" />
+    <Content Include="Content\Images\Produkter\201801201004355.png" />
     <Content Include="Content\Scripts\jquery-3.2.1.js" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -218,7 +242,6 @@
     <Folder Include="Areas\CMS\Models\" />
     <Folder Include="Areas\CMS\Views\Shared\" />
     <Folder Include="Content\Images\Nyheder\" />
-    <Folder Include="Content\Images\Produkter\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LyngbyBrygRepo\LyngbyBrygRepo.csproj">

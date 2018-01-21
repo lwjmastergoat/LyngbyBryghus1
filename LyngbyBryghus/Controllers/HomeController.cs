@@ -47,7 +47,7 @@ namespace LyngbyBryghus.Controllers
             return View(kf.Get(1));
         }
 
-        public ActionResult ProduktDetaljer(int ID=0)
+        public ActionResult ProduktDetaljer(int ID)
         {
             if(ID != 0)
             {
