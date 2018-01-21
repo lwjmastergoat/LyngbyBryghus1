@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "AddNew";
+    Layout = "~/Views/Shared/_CMSLayout.cshtml";
+}
+
+<h1>Tilføj Nyhed</h1>
+<hr />
+
+<form method="post" action="/CMS/Nyheds/AddNew/" enctype="multipart/form-data">
+    <label>Overskrift</label>
+    <br />
+    <input type="text" name="Overskrift" />
+    <br />
+    <label>Indhold</label>
+    <br />
+    <textarea name="Indhold"></textarea>
+    <br />
+    <label>Underoverskrift</label>
+    <br />
+    <input type="text" name="Underoverskrift" />
+    <br />
+    <label>Billed</label>
+    <br />
+    <input type="file" name="Photo" />
+    <br />
+    <label>BrugerID</label>
+    <br />
+    <input name="BrugerID" type="text" />
+    <br />
+
+    <button type="submit">Opret Nyhed</button>
+</form>

@@ -26,7 +26,7 @@ namespace LyngbyBryghus.Areas.CMS.Controllers
             {
                 return Redirect("/Login");
             }
-            return View();
+            return View(nf.GetAll());
         }
         public ActionResult AddNew()
         {
@@ -45,7 +45,7 @@ namespace LyngbyBryghus.Areas.CMS.Controllers
                 return Redirect("/CMS");
             }
 
-
+            input.Dato = DateTime.Now;
             input.Image = null;
 
             if (Photo != null)
@@ -57,7 +57,80 @@ namespace LyngbyBryghus.Areas.CMS.Controllers
 
             nf.Insert(input);
 
-            return Redirect("/CMS/Nyheder");
+            return Redirect("/CMS/Nyheds");
+        }
+
+        public ActionResult Delete(int ID)
+        {
+            if (Session["rolle"] == null || (int)Session["rolle"] < Editor)
+            {
+                return Redirect("/CMS/Nyheds");
+            }
+
+
+
+            Nyhedstabel Nyheds = nf.Get(ID);
+
+            if (Nyheds.Image != null)
+            {
+                string imagePath = Request.PhysicalApplicationPath + "/ArticleImages/" + Nyheds.Image;
+
+                if (System.IO.File.Exists(imagePath))
+                {
+                    System.IO.File.Delete(imagePath);
+                }
+            }
+
+            nf.Delete(ID);
+
+            return Redirect("/CMS/Nyheds");
+        }
+
+        public ActionResult Edit(int ID)
+        {
+            if (Session["rolle"] == null || (int)Session["rolle"] < Editor)
+            {
+                return Redirect("/CMS/Nyheds");
+            }
+
+            return View(nf.Get(ID));
+        }
+
+        [HttpPost]
+        public ActionResult Edit(Nyhedstabel input, HttpPostedFileBase Photo)
+        {
+            if (Session["rolle"] == null || (int)Session["rolle"] < Editor)
+            {
+                return Redirect("/CMS/Nyheds");
+            }
+
+
+            input.Image = null;
+            input.Dato = null;
+            input.BrugerID = null;
+
+            if (Photo != null)
+            {
+                Nyhedstabel nyheds = nf.Get(input.ID);
+
+                if (nyheds.Image != null)
+                {
+                    string imagePath = Request.PhysicalApplicationPath + "/Content/Images/Nyheder/" + nyheds.Image;
+
+                    if (System.IO.File.Exists(imagePath))
+                    {
+                        System.IO.File.Delete(imagePath);
+                    }
+
+                }
+                string newImagePath = Request.PhysicalApplicationPath + "/Content/Images/Nyheder/";
+                input.Image = ft.ImageUpload(Photo, newImagePath);
+            }
+
+            nf.Update(input);
+
+
+            return Redirect("/CMS/Nyheds");
         }
 
     }
