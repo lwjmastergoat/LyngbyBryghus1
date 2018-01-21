@@ -116,6 +116,8 @@
     <Content Include="Content\CSS\font-awesome.min.css" />
     <Content Include="Content\CSS\loginmainlayout.css" />
     <Content Include="Content\CSS\mainlayout.css" />
+    <Content Include="Content\Images\CMS\blue_white_spots_background_65560_1920x1080.jpg" />
+    <Content Include="Content\Images\CMS\white-background-5.jpg" />
     <Content Include="Content\Images\Generelt\lyngbybryghuslogoskriftblack-min.png" />
     <Content Include="Content\Scripts\jquery-3.2.1.js" />
     <Content Include="fonts\fontawesome-webfont.svg" />
@@ -168,6 +170,8 @@
     <Content Include="Areas\CMS\Views\Produkt\Index.cshtml" />
     <Content Include="Areas\CMS\Views\Produkt\Edit.cshtml" />
     <Content Include="Views\Home\ProduktDetaljer.cshtml" />
+    <Content Include="Areas\CMS\Views\Nyheds\AddNew.cshtml" />
+    <Content Include="Areas\CMS\Views\Nyheds\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
