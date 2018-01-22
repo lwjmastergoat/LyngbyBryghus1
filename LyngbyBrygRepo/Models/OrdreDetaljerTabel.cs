@@ -13,7 +13,7 @@ namespace LyngbyBrygRepo
         public int ProduktID { get; set; }
         public int Antal { get; set; }
         public int BrugerID { get; set; }
-        public int KategoriID { get; set; }
+        public int KategoriIDKunde { get; set; }
         public DateTime Dato { get; set; }
         public int OrdreID { get; set; }
     }

@@ -93,6 +93,7 @@
     <Compile Include="Models\OrdreDetaljerTabel.cs" />
     <Compile Include="Models\ProduktTabellen.cs" />
     <Compile Include="Models\R_Models\OrdreDetaljerJoin.cs" />
+    <Compile Include="Models\R_Models\OrdreDetaljerTabel.cs" />
     <Compile Include="Models\R_Models\ProduktKategoriJoin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
