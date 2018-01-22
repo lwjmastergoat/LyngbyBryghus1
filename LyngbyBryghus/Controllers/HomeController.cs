@@ -23,6 +23,7 @@ namespace LyngbyBryghus.Controllers
         ProduktDetaljerFac pdf = new ProduktDetaljerFac();
 
 
+
         public ActionResult Index()
         {
             Forsiden.Nyheder = nf.GetAll();
@@ -39,15 +40,18 @@ namespace LyngbyBryghus.Controllers
 
         public ActionResult Bestilling()
         {
-            return View(pkjf.GetProducts());
-        }
-  [HttpPost]
-        public ActionResult OrdreKategorier()
-        {
+            ViewBag.AlleProdukter = pkjf.GetProducts();
             return View();
         }
 
-      
+        [HttpPost]
+        public ActionResult OrdreKategorier(LyngbyBrygRepo.Models.R_Models.OrdreDetaljerTabel ordreDetaljer)
+        {
+            
+            return View();
+        }
+
+
 
 
 
@@ -59,7 +63,7 @@ namespace LyngbyBryghus.Controllers
 
         public ActionResult ProduktDetaljer(int ID)
         {
-            if(ID != 0)
+            if (ID != 0)
             {
                 try
                 {

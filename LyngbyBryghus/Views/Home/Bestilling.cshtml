@@ -1,12 +1,13 @@
 ﻿@* HOME BESTILLING *@
 
+@using LyngbyBrygRepo.Models.R_Models
 @using LyngbyBrygRepo.Models
-@model List<ProduktKategoriJoin>
+@model LyngbyBrygRepo.Models.R_Models.OrdreDetaljerTabel
 @{
     ViewBag.Title = "Bestilling";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
-<form>
+<form action="/Home/OrdreKategorier/" method="post" enctype="multipart/form-data">
     <div class="container">
         <section class="row">
             <div class="col-md-12">
@@ -29,39 +30,39 @@
 
         <section class="row">
             <div class="col-md-8">
-                
-                    <select name="ProduktID">
-                        <option disabled selected>Valg 1</option>
-                        @foreach (ProduktKategoriJoin produktnavn in Model)
-                        {
-                            <option value="@produktnavn.ID">@produktnavn.Navn</option>
-                        }
-                    </select>
-                    <br />
-                    <select name="ProduktID">
-                        <option disabled selected>Valg 1</option>
-                        @foreach (ProduktKategoriJoin produktnavn in Model)
-                        {
-                            <option value="@produktnavn.ID">@produktnavn.Navn</option>
-                        }
-                    </select>
-                    <br />
-                    <select name="ProduktID">
-                        <option disabled selected>Valg 1</option>
-                        @foreach (ProduktKategoriJoin produktnavn in Model)
-                        {
-                            <option value="@produktnavn.ID">@produktnavn.Navn</option>
-                        }
-                    </select>
-                    <br />
-                    <select name="ProduktID">
-                        <option disabled selected>Valg 1</option>
-                        @foreach (ProduktKategoriJoin produktnavn in Model)
-                        {
-                            <option value="@produktnavn.ID">@produktnavn.Navn</option>
-                        }
-                    </select>
-               
+
+                <select name="ProduktID">
+                    <option disabled selected>Valg 1</option>
+                    @foreach (ProduktKategoriJoin produktnavn in ViewBag.AlleProdukter)
+                    {
+                        <option value="@produktnavn.ID">@produktnavn.Navn</option>
+                    }
+                </select>
+                <br />
+                <select name="ProduktID">
+                    <option disabled selected>Valg 1</option>
+                    @foreach (ProduktKategoriJoin produktnavn in ViewBag.AlleProdukter)
+                    {
+                        <option value="@produktnavn.ID">@produktnavn.Navn</option>
+                    }
+                </select>
+                <br />
+                <select name="ProduktID">
+                    <option disabled selected>Valg 1</option>
+                    @foreach (ProduktKategoriJoin produktnavn in ViewBag.AlleProdukter)
+                    {
+                        <option value="@produktnavn.ID">@produktnavn.Navn</option>
+                    }
+                </select>
+                <br />
+                <select name="ProduktID">
+                    <option disabled selected>Valg 1</option>
+                    @foreach (ProduktKategoriJoin produktnavn in ViewBag.AlleProdukter)
+                    {
+                        <option value="@produktnavn.ID">@produktnavn.Navn</option>
+                    }
+                </select>
+
             </div>
         </section>
 
@@ -80,13 +81,13 @@
 
         <section class="row">
             <div class="col-md-8">
-            
-                    <input type="checkbox" name="KategoriID" value="1" /> Lyse
-                    <input type="checkbox" name="KategoriID" value="2" /> Mørke
-                    <input type="checkbox" name="KategoriID" value="3" /> Mjød<br />
-                    <input type="checkbox" name="KategoriID" value="4" />  Røde
-                    <input type="checkbox" name="KategoriID" value="5" /> Special
-      
+
+                <input type="checkbox" name="KategoriID" value="1" /> Lyse
+                <input type="checkbox" name="KategoriID" value="2" /> Mørke
+                <input type="checkbox" name="KategoriID" value="3" /> Mjød<br />
+                <input type="checkbox" name="KategoriID" value="4" />  Røde
+                <input type="checkbox" name="KategoriID" value="5" /> Special
+
             </div>
         </section>
 
@@ -105,11 +106,9 @@
 
         <section class="row">
             <div class="col-md-8">
-               
-                <input type="checkbox" name="AbonnementID" checked="checked" value="0" style="display:none" />
-                    <input type="checkbox" name="AbonnementID" value="1" /> Abonnement
-                    
-              
+
+                @Html.CheckBoxFor(model => model.AbonnementID)
+
             </div>
         </section>
 
@@ -123,47 +122,47 @@
         <section class="row">
             <div class="col-md-12 center-block">
                 <h4>Dine oplysninger</h4>
-                
-                    <div class="messages"></div>
-                    <div class="controls center-block">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="form_name">Navn *</label>
-                                <input id="form_name" type="text" name="name" class="form-control" placeholder="Indtast venligst dit navn *" required="required" data-error="Dit fulde navn skal udfyldes.">
-                                <div class="help-block with-errors"></div>
-                            </div>
-                        </div>
 
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="form_address">Adresse *</label>
-                                <input id="form_address" type="text" name="address" class="form-control" placeholder="Indtast venligst din adresse *">
-                                <div class="help-block with-errors"></div>
-                            </div>
+                <div class="messages"></div>
+                <div class="controls center-block">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="form_name">Navn *</label>
+                            <input id="form_name" type="text" name="navn" class="form-control" placeholder="Indtast venligst dit navn *" required="required" data-error="Dit fulde navn skal udfyldes.">
+                            <div class="help-block with-errors"></div>
                         </div>
-
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="form_email">Mail *</label>
-                                <input id="form_email" type="email" name="email" class="form-control" placeholder="Indtast venligst din email *" required="required" data-error="Din email skal udfyldes">
-                                <div class="help-block with-errors"></div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="form_phone">Mobil *</label>
-                                <input id="form_phone" type="text" name="phone" class="form-control" placeholder="Indtast venligst dit mobilnummer *" required="required" data-error="Din email skal udfyldes">
-                                <div class="help-block with-errors"></div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-12">
-                            <input type="submit" class="btn btn-outline-dark btn-send" value="Videre til betaling">
-                        </div>
-
                     </div>
-              
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="form_address">Adresse *</label>
+                            <input id="form_address" type="text" name="address" class="form-control" placeholder="Indtast venligst din adresse *">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="form_email">Mail *</label>
+                            <input id="form_email" type="email" name="email" class="form-control" placeholder="Indtast venligst din email *" required="required" data-error="Din email skal udfyldes">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="form_phone">Mobil *</label>
+                            <input id="form_phone" type="text" name="phone" class="form-control" placeholder="Indtast venligst dit mobilnummer *" required="required" data-error="Din email skal udfyldes">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <input type="submit" class="btn btn-outline-dark btn-send" value="Videre til betaling">
+                    </div>
+
+                </div>
+
             </div>
         </section>
     </div>
