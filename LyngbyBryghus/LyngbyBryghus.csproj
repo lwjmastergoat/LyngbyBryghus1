@@ -156,7 +156,9 @@
     <Content Include="Views\Shared\_CMSLayout.cshtml" />
     <Content Include="Views\Shared\_LoginMain.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
-    <Content Include="Areas\CMS\Views\web.config" />
+    <Content Include="Areas\CMS\Views\web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Areas\CMS\Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Bestilling.cshtml" />
     <Content Include="Areas\CMS\Views\Admin\Index.cshtml" />
@@ -168,6 +170,12 @@
     <Content Include="Areas\CMS\Views\Produkt\Index.cshtml" />
     <Content Include="Areas\CMS\Views\Produkt\Edit.cshtml" />
     <Content Include="Views\Home\ProduktDetaljer.cshtml" />
+    <Content Include="Areas\Kunde\Views\web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Areas\Kunde\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Kunde\Views\Ordre\Index.cshtml" />
+    <Content Include="Views\KundeLogin\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -197,7 +205,11 @@
     <Compile Include="Areas\CMS\Controllers\HomeController.cs" />
     <Compile Include="Areas\CMS\Controllers\NyhedsController.cs" />
     <Compile Include="Areas\CMS\Controllers\ProduktController.cs" />
+    <Compile Include="Areas\Kunde\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Kunde\Controllers\OrdreController.cs" />
+    <Compile Include="Areas\Kunde\KundeAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KundeLoginController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -213,6 +225,8 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\CMS\Models\" />
     <Folder Include="Areas\CMS\Views\Shared\" />
+    <Folder Include="Areas\Kunde\Models\" />
+    <Folder Include="Areas\Kunde\Views\Shared\" />
     <Folder Include="Content\Images\Nyheder\" />
     <Folder Include="Content\Images\Produkter\" />
   </ItemGroup>

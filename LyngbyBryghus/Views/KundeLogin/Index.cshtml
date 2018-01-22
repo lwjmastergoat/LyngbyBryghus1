@@ -1,0 +1,24 @@
+﻿@* KUNDE LOGIN INDEX *@
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Login</h2><br />
+<form method="post" action="/KundeLogin/Index/">
+    <p>
+        Her kan du logge dig ind, hvis du allerede er bruger<br />
+        <input type="text" class="input1" name="Navn" placeholder="Brugernavn" required />
+        <br />
+        <input type="password" class="input2" name="Password" placeholder="Kodeord" required />
+        <br />
+        <button class="btn knap2" type="submit">Login</button>
+        <button class="btn knap1" type="button">Glemt password</button><br />
+        <a href="/Home/Index"><button class="btn knap1" type="button">Tilbage</button></a>
+
+        <br />
+        @Html.Raw(ViewBag.Msg)
+    </p>
+</form>
+
