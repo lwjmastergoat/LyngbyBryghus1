@@ -1,8 +1,55 @@
-﻿
+﻿@using LyngbyBrygRepo.Models;
+@model List<Nyhedstabel>
+
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_CMSLayout.cshtml";
 }
 
-<h2>Index</h2>
+<h1 class="text-center">Nyheder</h1>
+<hr />
 
+<table>
+    <thead>
+        <tr>
+            <td>Overskrift</td>
+            <td>ID</td>
+            <td>Dato</td>
+            <td>Billede</td>
+            <td>Indhold</td>
+            <td>Underoverskrift</td>
+            <td><a href="/CMS/Nyheds/AddNew"><button class="btn alert-info">Add News</button></a></td>
+            <td></td>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.Overskrift</td>
+            <td>@item.ID</td>
+            <td>@item.Dato</td>
+            <td>@item.Image</td>
+            <td>@item.Indhold</td>
+            <td>@item.Underoverskrift</td>
+            <td class="remove">
+                @if ((int)Session["rolle"] >= 1)
+        {
+            <a href="/CMS/Nyheds/Delete/@item.ID"><button class="btn alert-danger">Remove</button></a>
+}
+            </td>
+
+            <td class="rediger">
+                @if ((int)Session["rolle"] >= 1)
+        {
+            <a href="/CMS/Nyheds/Edit/@item.ID"><button class="btn alert-primary">Edit</button></a>
+}
+            </td>
+
+        </tr>
+        }
+    </tbody>
+</table>

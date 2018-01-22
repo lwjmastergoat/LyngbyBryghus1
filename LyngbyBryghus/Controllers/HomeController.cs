@@ -41,13 +41,23 @@ namespace LyngbyBryghus.Controllers
         {
             return View(pkjf.GetProducts());
         }
+  [HttpPost]
+        public ActionResult OrdreKategorier()
+        {
+            return View();
+        }
+
+      
+
+
+
 
         public ActionResult Kontakt()
         {
             return View(kf.Get(1));
         }
 
-        public ActionResult Details(int ID=0)
+        public ActionResult ProduktDetaljer(int ID)
         {
             if(ID != 0)
             {

@@ -10,20 +10,19 @@
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 
-<div class="col-md-8 offset-md-2">
-    <h1>Vores Øl</h1>
+<h1>Vores Øl</h1>
 
-    <div class="row">
+<div class="row">
 
-        @foreach (var item in Model)
-        {
-            <div class="col-md-3">
-               <h3>@item.Navn</h3> <br />
-                <img class="maerkat" src="~/Content/Images/Produkter/@item.Billede" alt="Produktbillede" /> <br />
+    @foreach (var item in Model)
+    {
+        <div class="col-md-3">
+            <h4>@item.Navn</h4> <br />
 
-               <button onclick="~/Views/Home/ProduktDetaljer.cshtml/@item.ID" class="btn btn-block btn-dark"> Se mere </button>
-            </div>
-        }
-    </div>
+            <img class="maerkat img-fluid" src="~/Content/Images/Produkter/@item.Billede" alt="Produktbillede" /> <br />
 
+            <a href="/Home/ProduktDetaljer/@item.ID/"> Se mere </a>
+        </div>
+    }
 </div>
+

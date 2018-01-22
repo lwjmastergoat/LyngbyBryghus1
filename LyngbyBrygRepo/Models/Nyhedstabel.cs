@@ -17,9 +17,9 @@ namespace LyngbyBrygRepo.Models
 
         public string Indhold { get; set; }
 
-        public DateTime Dato { get; set; }
+        public DateTime? Dato { get; set; }
 
-        public int BrugerID { get; set; }
+        public int? BrugerID { get; set; }
 
         public string Image { get; set; }
 
