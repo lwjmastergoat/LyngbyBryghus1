@@ -1,0 +1,56 @@
+﻿@using LyngbyBrygRepo
+@model KundeTabel
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_CMSLayout.cshtml";
+}
+
+
+<form method="post" action="/CMS/Kunde/Edit/" enctype="multipart/form-data">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2 class="headlineh2">Navn</h2>
+                <br />
+                <input type="text" name="Navn" class="inputs hdinput" value="@Model.Navn" />
+                <br />
+                <h2>Mail</h2>
+                <br />
+                <input type="text" name="Mail" class="inputs hdinput" value="@Model.Mail" />
+                <br />
+                <h2 class="headlineh2">Password</h2>
+                <br />
+                <input type="text" name="Password" class="inputs hdinput" value="@Model.Password" />
+                <br />
+                <h2 class="headlineh2">Abonnent</h2>
+                <br />
+                <input type="text" name="Abonnent" class="inputs hdinput" value="@Model.Abonnent" />
+                <br />
+                <h2 class="headlineh2">Adresse</h2>
+                <br />
+                <input type="text" name="Adresse" class="inputs hdinput" value="@Model.Adresse" />
+                <br />
+                <h2 class="headlineh2">Postnummer</h2>
+                <br />
+                <input type="text" name="PostNummer" class="inputs hdinput" value="@Model.PostNummer" />
+                <br />
+                <h2 class="headlineh2">By Navn</h2>
+                <br />
+                <input type="text" name="ByNavn" class="inputs hdinput" value="@Model.ByNavn" />
+                <br />
+                <h2 class="headlineh2">Mobil</h2>
+                <br />
+                <input type="text" name="Mobil" class="inputs hdinput" value="@Model.Mobil" />
+                <br />
+                <input type="hidden" value="@Model.ID" name="ID" />
+            </div>
+        
+
+            <div class="col-sm-12">
+                <button type="submit">Edit Produkt</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+

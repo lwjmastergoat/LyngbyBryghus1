@@ -1,0 +1,70 @@
+﻿@using LyngbyBrygRepo.Models
+@model KontaktTabel
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_CMSLayout.cshtml";
+}
+
+<form method="post" action="/CMS/Kontakt/Edit/" enctype="multipart/form-data">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2 class="headlineh2">Overskrift</h2>
+                <br />
+                <input type="text" name="Overskrift" class="inputs hdinput" value="@Model.Overskrift" />
+                <br />
+                <h2>Tekst</h2>
+                <br />
+                <textarea class="inputs" name="Tekst">@Model.Tekst</textarea>
+                <br />
+                <h2 class="headlineh2">Adresse</h2>
+                <br />
+                <input type="text" name="Adresse" class="inputs hdinput" value="@Model.Adresse" />
+                <br />
+                <h2 class="headlineh2">Postnummer</h2>
+                <br />
+                <input type="text" name="Postnummer" class="inputs hdinput" value="@Model.Postnummer" />
+                <br />
+                <h2 class="headlineh2">ByNavn</h2>
+                <br />
+                <input type="text" name="ByNavn" class="inputs hdinput" value="@Model.ByNavn" />
+                <br />
+                <h2 class="headlineh2">Mailadresse</h2>
+                <br />
+                <input type="text" name="Mailadresse" class="inputs hdinput" value="@Model.Mailadresse" />
+                <br />
+                <h2 class="headlineh2">Mobil</h2>
+                <br />
+                <input type="text" name="Mobil" class="inputs hdinput" value="@Model.Mobil" />
+                <br />
+
+            </div>
+            <div class="col-sm-6">
+                <h2>New Picture</h2>
+                <br />
+                <input type="file" class="roleselect" name="Photo" />
+                <br />
+                <input type="hidden" value="@Model.ID" name="ID" />
+                <br />
+
+
+                @if (Model.Billede != null)
+                {
+                    <h2 class="currentimg"> Current Picture </h2>
+                    <img src="~/Content/Images/Kontakt/@Model.Billede" width="300" />
+                    <br />
+
+                }
+
+            </div>
+
+            <div class="col-sm-12">
+                <button type="submit">Edit Produkt</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+
