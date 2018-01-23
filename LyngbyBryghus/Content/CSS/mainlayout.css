@@ -92,17 +92,29 @@ footer {
 /*#region Produkter */
 
 
-.maerkat{
-    float:right;
-    display:inline-block;
+.maerkat {
+    float: right;
+    display: inline-block;
+}
 
 
 .bestil{
- float:right;
+ float:right;}
+
+#headline{
+    margin-bottom:20px;
+    margin-top:20px;
 }
 
+.produktlinje{
+    margin-bottom:30px;
+}
 
 
 /*#endregion */
 
+/*#region Produktdetaljer */
 
+
+
+/*#endregion */
