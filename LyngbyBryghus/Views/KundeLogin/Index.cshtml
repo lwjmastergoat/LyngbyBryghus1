@@ -1,4 +1,4 @@
-﻿@* ADMIN/BRUGER LOGIN INDEX *@
+﻿@* KUNDE LOGIN INDEX *@
 
 @{
     ViewBag.Title = "Index";
@@ -10,18 +10,29 @@
         margin: 10px 0;
         width: 300px;
     }
+
     button {
         margin: 10px 0;
     }
 </style>
 <div class="container">
     <section class="row">
-        <div class="col-sm-12">
+        <div class="col-sm-6">
+            <h2>Ny kunde</h2><br />
+            <p>
+                Opret dig som ny kunde og få adgang til forskellige funktioner som f.eks. din ordrehistorik m.m.
+            </p>
+            <p>
+                <button class="btn knap1" type="button">Opret dig som kunde</button>
+            </p>
+        </div>
+
+        <div class="col-sm-6">
             <div class="loginwrap d-block mx-auto">
                 <h2>Login</h2><br />
-                <form method="post" action="/Login/Index/">
+                <form method="post" action="/KundeLogin/Index/">
                     <p>
-                        Admin/Bruger Login<br />
+                        Her kan du logge dig ind, hvis du allerede er kunde<br />
                         <input type="text" class="input1" name="Navn" placeholder="Brugernavn" required />
                         <br />
                         <input type="password" class="input2" name="Password" placeholder="Kodeord" required />
