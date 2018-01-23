@@ -8,6 +8,8 @@ using LyngbyBrygRepo.Factories;
 using LyngbyBrygRepo.Models;
 using LyngbyBrygRepo;
 using LyngbyBryghus.ViewModels;
+using LyngbyBrygRepo.Models;
+using LyngbyBrygRepo.Models.R_Models;
 
 namespace LyngbyBryghus.Controllers
 {
@@ -21,7 +23,10 @@ namespace LyngbyBryghus.Controllers
         Forsiden Forsiden = new Forsiden();
         ProduktKategoriJoinFac pkjf = new ProduktKategoriJoinFac();
         ProduktDetaljerFac pdf = new ProduktDetaljerFac();
-
+        OrdreDetaljerTabelFac ordreDetaljerFactory = new OrdreDetaljerTabelFac();
+        KundeFac kundeFac = new KundeFac();
+        KategoriOrdreTabelFac kotf = new KategoriOrdreTabelFac();
+        ProduktOrdreFac pof = new ProduktOrdreFac();
 
 
         public ActionResult Index()
@@ -45,9 +50,40 @@ namespace LyngbyBryghus.Controllers
         }
 
         [HttpPost]
-        public ActionResult OrdreKategorier(LyngbyBrygRepo.Models.R_Models.OrdreDetaljerTabel ordreDetaljer)
+        public ActionResult OrdreKategorier(OrdreDetaljerTabel_R ordreDetaljer)
         {
-            
+            KundeTabel nyKunde = new KundeTabel();
+            nyKunde.Adresse = ordreDetaljer.Address;
+            nyKunde.Mail = ordreDetaljer.Email;
+            nyKunde.Navn = ordreDetaljer.Navn;
+            nyKunde.Mobil = int.Parse(ordreDetaljer.Phone);
+            nyKunde.Password = "1234"; // Generér eventuelt et random password. Husk at sende til ny brugers email.
+            nyKunde.Abonnent = Convert.ToInt32(ordreDetaljer.AbonnementID);
+            int nyKundeID = kundeFac.Insert(nyKunde);
+
+            OrdreDetaljerTabel ordre = new OrdreDetaljerTabel();
+            ordre.BrugerID = nyKundeID;
+            ordre.Dato = DateTime.Now;
+            ordre.AbonnementID = ordreDetaljer.AbonnementID;
+            int ordreID = ordreDetaljerFactory.Insert(ordre);
+
+            foreach (int kategoriID in ordreDetaljer.KategoriID)
+            {
+                KategoriOrdreTabel kot = new KategoriOrdreTabel();
+                kot.KategoriID = kategoriID;
+                kot.OrdreDetaljerID = ordreID;
+                kotf.Insert(kot);
+            }
+
+            foreach (int produktID in ordreDetaljer.ProduktID)
+            {
+                ProduktOrdreTabel pot = new ProduktOrdreTabel();
+                pot.OrdreDetaljerID = ordreID;
+                pot.ProduktID = produktID;
+                pof.Insert(pot);
+            }
+
+
             return View();
         }
 

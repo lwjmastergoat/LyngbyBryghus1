@@ -8,7 +8,7 @@ using LyngbyBrygRepo.Models;
 
 namespace LyngbyBrygRepo.Models.R_Models
 {
-    public class OrdreDetaljerTabel
+    public class OrdreDetaljerTabel_R
     {
         public int ID { get; set; }
         public List<int> ProduktID { get; set; }

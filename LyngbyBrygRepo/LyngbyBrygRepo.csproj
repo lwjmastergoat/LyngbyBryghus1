@@ -75,15 +75,20 @@
     <Compile Include="Factories\BrugerFac.cs" />
     <Compile Include="Factories\IndholdFac.cs" />
     <Compile Include="Factories\KategoriFac.cs" />
+    <Compile Include="Factories\KategoriOrdreTabelFac.cs" />
     <Compile Include="Factories\KontaktFac.cs" />
     <Compile Include="Factories\KundeFac.cs" />
+    <Compile Include="Factories\KundeOrdreTabelFac.cs" />
     <Compile Include="Factories\NyhedsFac.cs" />
     <Compile Include="Factories\OmFac.cs" />
+    <Compile Include="Factories\OrdreDetaljerTabelFac.cs" />
     <Compile Include="Factories\OrdreFac.cs" />
     <Compile Include="Factories\ProduktDetaljerFac.cs" />
     <Compile Include="Factories\ProduktFac.cs" />
     <Compile Include="Factories\ProduktKategoriJoinFac.cs" />
+    <Compile Include="Factories\ProduktOrdreFac.cs" />
     <Compile Include="Models\AdminTabel.cs" />
+    <Compile Include="Models\KategoriOrdreTabel.cs" />
     <Compile Include="Models\KategoriTabel.cs" />
     <Compile Include="Models\KontaktTabel.cs" />
     <Compile Include="Models\KundeOrdreTabel.cs" />
@@ -91,9 +96,10 @@
     <Compile Include="Models\Nyhedstabel.cs" />
     <Compile Include="Models\OmTabel.cs" />
     <Compile Include="Models\OrdreDetaljerTabel.cs" />
+    <Compile Include="Models\ProduktOrdreTabel.cs" />
     <Compile Include="Models\ProduktTabellen.cs" />
     <Compile Include="Models\R_Models\OrdreDetaljerJoin.cs" />
-    <Compile Include="Models\R_Models\OrdreDetaljerTabel.cs" />
+    <Compile Include="Models\R_Models\OrdreDetaljerTabel_R.cs" />
     <Compile Include="Models\R_Models\ProduktKategoriJoin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
