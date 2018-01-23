@@ -1,0 +1,48 @@
+﻿@using LyngbyBrygRepo.Models
+@model List<OmTabel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_CMSLayout.cshtml";
+}
+
+
+
+<h1 class="text-center">Om Os</h1>
+<hr />
+
+<table>
+    <thead>
+        <tr>
+            <td>Overskrift</td>
+            <td>Indhold</td>
+            <td><a href="#"><button class="btn alert-info disabled">Tilføj OmOs</button></a></td>
+            <td></td>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Overskrift</td>
+                <td>@item.Indhold</td>
+                <td class="remove">
+                    @if ((int)Session["rolle"] >= 1)
+                    {
+                        <a href="#"><button class="btn alert-danger disabled">Remove</button></a>
+                    }
+                </td>
+
+                <td class="rediger">
+                    @if ((int)Session["rolle"] >= 1)
+                    {
+                        <a href="/CMS/OmOs/Edit/@item.ID"><button class="btn alert-primary">Edit</button></a>
+                    }
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>

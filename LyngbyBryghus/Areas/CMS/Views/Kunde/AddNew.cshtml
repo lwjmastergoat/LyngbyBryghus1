@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "AddNew";
+    Layout = "~/Views/Shared/_CMSLayout.cshtml";
+}
+
+<h1>Tilføj Kunde</h1>
+<hr />
+
+<form method="post" action="/CMS/Kunde/AddNew/" enctype="multipart/form-data">
+    <label>Navn</label>
+    <br />
+    <input type="text" name="Navn" />
+    <br />
+    <label>Mail</label>
+    <br />
+    <input type="text" name="Mail" />
+    <br />
+    <label>Password</label>
+    <br />
+    <input type="text" name="Password" />
+    <br />
+    <label>Abonnonent 0-1</label>
+    <br />
+    <input type="text" name="Abonnent" />
+    <br />
+    <label>Adresse</label>
+    <br />
+    <input type="text" name="Adresse" />
+    <br />
+    <label>PostNummer</label>
+    <br />
+    <input type="text" name="PostNummer" />
+    <br />
+    <label>ByNavn</label>
+    <br />
+    <input type="text" name="ByNavn" />
+    <br />
+    <label>Mobil</label>
+    <br />
+    <input type="text" name="Mobil" />
+    <br />
+    <button type="submit">Opret Kunde</button>
+</form>
+
+
