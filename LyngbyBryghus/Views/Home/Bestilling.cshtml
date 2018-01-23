@@ -1,138 +1,134 @@
 ﻿@* HOME BESTILLING *@
 
+@using LyngbyBrygRepo.Models.R_Models
 @using LyngbyBrygRepo.Models
-@model List<ProduktKategoriJoin>
-
+@model LyngbyBrygRepo.Models.R_Models.OrdreDetaljerTabel_R
 @{
     ViewBag.Title = "Bestilling";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
+<form action="/Home/OrdreKategorier/" method="post" enctype="multipart/form-data">
+    <div class="container">
+        <section class="row">
+            <div class="col-md-12">
+                <h2>Bestilling</h2>
+            </div>
+        </section>
 
-<div class="container">
-    <section class="row">
-        <div class="col-md-12">
-            <h2>Bestilling</h2>
-        </div>
-    </section>
+        <section class="row">
+            <div class="col-md-12">
+                <h4>Her kan du bestille øl</h4>
+                <hr />
+            </div>
+        </section>
 
-    <section class="row">
-        <div class="col-md-12">
-            <h4>Her kan du bestille øl</h4>
-            <hr />
-        </div>
-    </section>
+        <section class="row">
+            <div class="col-md-12">
+                <h4>Jeg ønsker 4 selvvalgte øl</h4>
+            </div>
+        </section>
 
-    <section class="row">
-        <div class="col-md-12">
-            <h4>Jeg ønsker 4 selvvalgte øl</h4>
-        </div>
-    </section>
+        <section class="row">
+            <div class="col-md-8">
 
-    <section class="row">
-        <div class="col-md-8">
-            <form method="post" action="/Home/Index/">
-                <select name="Navn">
+                <select name="ProduktID">
                     <option disabled selected>Valg 1</option>
-                    @foreach (ProduktKategoriJoin produktnavn in Model)
+                    @foreach (ProduktKategoriJoin produktnavn in ViewBag.AlleProdukter)
                     {
                         <option value="@produktnavn.ID">@produktnavn.Navn</option>
                     }
                 </select>
                 <br />
-                <select name="Navn">
+                <select name="ProduktID">
                     <option disabled selected>Valg 1</option>
-                    @foreach (ProduktKategoriJoin produktnavn in Model)
+                    @foreach (ProduktKategoriJoin produktnavn in ViewBag.AlleProdukter)
                     {
                         <option value="@produktnavn.ID">@produktnavn.Navn</option>
                     }
                 </select>
                 <br />
-                <select name="Navn">
+                <select name="ProduktID">
                     <option disabled selected>Valg 1</option>
-                    @foreach (ProduktKategoriJoin produktnavn in Model)
+                    @foreach (ProduktKategoriJoin produktnavn in ViewBag.AlleProdukter)
                     {
                         <option value="@produktnavn.ID">@produktnavn.Navn</option>
                     }
                 </select>
                 <br />
-                <select name="Navn">
+                <select name="ProduktID">
                     <option disabled selected>Valg 1</option>
-                    @foreach (ProduktKategoriJoin produktnavn in Model)
+                    @foreach (ProduktKategoriJoin produktnavn in ViewBag.AlleProdukter)
                     {
                         <option value="@produktnavn.ID">@produktnavn.Navn</option>
                     }
                 </select>
-            </form>
-        </div>
-    </section>
 
-    <section class="row">
-        <div class="col-md-12">
-            <h4 style="text-align: right;">A' Prisen ... 225 kr</h4>
-            <hr />
-        </div>
-    </section>
+            </div>
+        </section>
 
-    <section class="row">
-        <div class="col-md-8">
-            <h4>Jeg ønsker bryggerens udvalgte</h4>
-        </div>
-    </section>
+        <section class="row">
+            <div class="col-md-12">
+                <h4 style="text-align: right;">A' Prisen ... 180 kr</h4>
+                <hr />
+            </div>
+        </section>
 
-    <section class="row">
-        <div class="col-md-8">
-            <form method="post" action="/Home/Index/">
-                <input type="checkbox" name="choice1" value="Lyse" /> Lyse
-                <input type="checkbox" name="choice2" value="Mørke" /> Mørke
-                <input type="checkbox" name="choice3" value="Mjød" /> Mjød<br />
-                <input type="checkbox" name="choice4" value="Røde" />  Røde
-                <input type="checkbox" name="choice5" value="Special" /> Special
-            </form>
-        </div>
-    </section>
+        <section class="row">
+            <div class="col-md-8">
+                <h4>Jeg ønsker bryggerens udvalgte</h4>
+            </div>
+        </section>
 
-    <section class="row">
-        <div class="col-md-12">
-            <h4 style="text-align: right;">A' Prisen ... 225 kr</h4>
-            <hr />
-        </div>
-    </section>
+        <section class="row">
+            <div class="col-md-8">
 
-    <section class="row">
-        <div class="col-md-8">
-            <h4>Jeg ønsker bryggerens udvalgte på abonnement</h4>
-        </div>
-    </section>
+                <input type="checkbox" name="KategoriID" value="1" /> Lyse
+                <input type="checkbox" name="KategoriID" value="2" /> Mørke
+                <input type="checkbox" name="KategoriID" value="3" /> Mjød<br />
+                <input type="checkbox" name="KategoriID" value="4" />  Røde
+                <input type="checkbox" name="KategoriID" value="5" /> Special
 
-    <section class="row">
-        <div class="col-md-8">
-            <form method="post" action="/Home/Index/">
-                <input type="checkbox" name="choice1" value="Lyse" /> Lyse øl
-                <input type="checkbox" name="choice2" value="Mørke" /> Mørke øl
-                <input type="checkbox" name="choice3" value="Mjød" /> Mjød øl<br />
-                <input type="checkbox" name="choice4" value="Røde" />  Røde øl
-                <input type="checkbox" name="choice5" value="Special" /> Special øl
-            </form>
-        </div>
-    </section>
+            </div>
+        </section>
 
-    <section class="row">
-        <div class="col-md-12">
-            <h4 style="text-align: right;">A' Prisen ... 225 kr</h4>
-            <hr />
-        </div>
-    </section>
+        <section class="row">
+            <div class="col-md-12">
+                <h4 style="text-align: right;">A' Prisen ... 180 kr</h4>
+                <hr />
+            </div>
+        </section>
 
-    <section class="row">
-        <div class="col-md-12 center-block">
-            <h4>Dine oplysninger</h4>
-            <form id="contact-form" method="post" action="contact.php" role="form">
+        <section class="row">
+            <div class="col-md-8">
+                <h4>Ønsker du de udvalgte på abonnent, så kryds af her:</h4>
+            </div>
+        </section>
+
+        <section class="row">
+            <div class="col-md-8">
+
+                @Html.CheckBoxFor(model => model.AbonnementID)
+
+            </div>
+        </section>
+
+        <section class="row">
+            <div class="col-md-12">
+                <h4 style="text-align: right;">A' Prisen ... 180 kr om måneden</h4>
+                <hr />
+            </div>
+        </section>
+
+        <section class="row">
+            <div class="col-md-12 center-block">
+                <h4>Dine oplysninger</h4>
+
                 <div class="messages"></div>
                 <div class="controls center-block">
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="form_name">Navn *</label>
-                            <input id="form_name" type="text" name="name" class="form-control" placeholder="Indtast venligst dit navn *" required="required" data-error="Dit fulde navn skal udfyldes.">
+                            <input id="form_name" type="text" name="navn" class="form-control" placeholder="Indtast venligst dit navn *" required="required" data-error="Dit fulde navn skal udfyldes.">
                             <div class="help-block with-errors"></div>
                         </div>
                     </div>
@@ -166,7 +162,8 @@
                     </div>
 
                 </div>
-            </form>
-        </div>
-    </section>
-</div>
+
+            </div>
+        </section>
+    </div>
+</form>

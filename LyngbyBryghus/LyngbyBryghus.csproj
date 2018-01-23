@@ -204,6 +204,10 @@
     <Content Include="Areas\CMS\Views\Kunde\Index.cshtml" />
     <Content Include="Areas\CMS\Views\Kunde\AddNew.cshtml" />
     <Content Include="Areas\CMS\Views\Kunde\Edit.cshtml" />
+    <Content Include="Areas\Kunde\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Kunde\Views\Ordre\Index.cshtml" />
+    <Content Include="Areas\Kunde\Views\web.config" />
+    <Content Include="Views\KundeLogin\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -236,7 +240,11 @@
     <Compile Include="Areas\CMS\Controllers\NyhedsController.cs" />
     <Compile Include="Areas\CMS\Controllers\OmOsController.cs" />
     <Compile Include="Areas\CMS\Controllers\ProduktController.cs" />
+    <Compile Include="Areas\Kunde\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Kunde\Controllers\OrdreController.cs" />
+    <Compile Include="Areas\Kunde\KundeAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KundeLoginController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -252,6 +260,8 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\CMS\Models\" />
     <Folder Include="Areas\CMS\Views\Shared\" />
+    <Folder Include="Areas\Kunde\Models\" />
+    <Folder Include="Areas\Kunde\Views\Shared\" />
     <Folder Include="Content\Images\Kontakt\" />
     <Folder Include="Content\Images\Nyheder\" />
   </ItemGroup>

@@ -13,9 +13,14 @@
 
 <div class="row">
     <div class="col-md-8 offset-md-2"></div>
+
+
     <h2>@Model.Navn</h2>
 
 
+    <div>
+        <img class="img-fluid maerkat" src="~/Content/Images/Produkter/@Model.Billede" alt="Produktbillede" />
+    </div>
 
     <p>
         <b>Øltype:</b> @Model.KategoriensNavn<br />
@@ -29,6 +34,9 @@
 
     <p>@Model.Beskrivelse</p>
 
-    <p><b>@Model.Pris kr.</b></p>
-    <button class="bestil btn btn-dark">Bestilling her</button>
+
+
 </div>
+
+<p><b>@Model.Pris kr.</b></p>
+<a href="~/Home/Bestilling/" class="bestil btn btn-dark">Bestilling her</a> 

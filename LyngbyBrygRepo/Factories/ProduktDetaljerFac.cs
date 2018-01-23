@@ -14,7 +14,7 @@ namespace LyngbyBrygRepo.Factories
 
     public ProduktKategoriJoin GetDetails(int ID)
         {
-            string SQL = "SELECT ProduktTabellen.ID, KategoriID, ProduktTabellen.Navn, Beskrivelse, Billede, Pris, Alkohol, Farve, Bitterhed, Gaertype, KategoriTabel.Navn AS 'KategoriensNavn' FROM ProduktTabellen INNER JOIN KategoriTabel ON ProduktTabellen.KategoriID = KategoriTabel.ID WHERE ProduktTabellen.ID =" + "@ID";
+            string SQL = "SELECT ProduktTabellen.ID, KategoriID, ProduktTabellen.Navn, Beskrivelse, Billede, Pris, Alkohol, Farve, Bitterhed, Gaertype, KategoriTabel.Navn AS 'KategoriensNavn' FROM ProduktTabellen INNER JOIN KategoriTabel ON ProduktTabellen.KategoriID = KategoriTabel.ID WHERE ProduktTabellen.ID =" + ID;
 
             return ExecuteSQL<ProduktKategoriJoin>(SQL)[0];
                 

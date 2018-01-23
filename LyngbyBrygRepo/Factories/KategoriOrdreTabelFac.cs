@@ -3,15 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using LyngbyBrygRepo.Models;
 using Duser;
+using LyngbyBrygRepo.Models;
 
 namespace LyngbyBrygRepo.Factories
 {
-    public class KategoriFac : AutoFac<KategoriTabel>
+    public class KategoriOrdreTabelFac : AutoFac<KategoriOrdreTabel>
     {
-
-       
-
     }
 }
