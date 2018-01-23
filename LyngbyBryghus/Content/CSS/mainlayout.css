@@ -115,6 +115,10 @@ footer {
 
 /*#region Produktdetaljer */
 
+.detaljebillede{
+
+    float:right;
+}
 
 
 /*#endregion */
