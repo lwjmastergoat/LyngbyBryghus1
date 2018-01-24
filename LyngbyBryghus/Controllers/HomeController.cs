@@ -59,6 +59,8 @@ namespace LyngbyBryghus.Controllers
             nyKunde.Mobil = int.Parse(ordreDetaljer.Phone);
             nyKunde.Password = "1234"; // Generér eventuelt et random password. Husk at sende til ny brugers email.
             nyKunde.Abonnent = Convert.ToInt32(ordreDetaljer.AbonnementID);
+            nyKunde.ByNavn = ordreDetaljer.ByNavn;
+            nyKunde.PostNummer = Convert.ToInt32(ordreDetaljer.PostNummer);
             int nyKundeID = kundeFac.Insert(nyKunde);
 
             OrdreDetaljerTabel ordre = new OrdreDetaljerTabel();
