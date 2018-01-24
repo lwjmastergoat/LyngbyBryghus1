@@ -50,6 +50,13 @@ h1 {
 
 .indhold{
     background-color:rgba(255,255,255, 0.3);
+    padding: 20px;
+}
+
+.columns {
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
 }
 
 /* #endregion */

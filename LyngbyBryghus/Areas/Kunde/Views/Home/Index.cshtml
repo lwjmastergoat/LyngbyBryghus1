@@ -1,11 +1,28 @@
 ﻿@* KUNDE HOME INDEX *@
 
+@using LyngbyBrygRepo
+@model KundeTabel
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 
 <h2>Index</h2>
+
+@if (Session["id"] == null)
+{
+    <a href="/Login/">Login</a>
+}
+else
+{
+    <a href="/Login/Logout">Logout</a>
+    <br />
+    <text><b>Navn</b> |</text> @Session["id"]
+    <br />
+    <text><b>Role</b> |</text> @Session["role"]
+
+}
 
 Velkommen igen, BRUGER!
 

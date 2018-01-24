@@ -39,7 +39,7 @@ namespace LyngbyBryghus.Controllers
         {
             Session.Remove("id");
             Session.Remove("abonnent");
-            return Redirect("/Home/Index/");
+            return Redirect("/Home/Index");
         }
     }
 }
