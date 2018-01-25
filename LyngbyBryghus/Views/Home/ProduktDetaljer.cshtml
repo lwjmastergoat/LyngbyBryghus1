@@ -12,31 +12,25 @@
 }
 
 <div class="row">
-    <div class="col-md-8 offset-md-2"></div>
+    <div class="col-md-6">
 
+        <h2>@Model.Navn</h2>
+        <p class="info">
+            <b>Øltype:</b> @Model.KategoriensNavn<br />
+            <b> Styrke: </b> @Model.Alkohol % <br />
+            <b> Bitterhed: </b> @Model.Bitterhed IBU <br />
+            <b> Farve: </b> @Model.Farve EBC <br />
+            <b> Gærtype: </b> @Model.Gaertype <br />
+        </p>
 
-    <h2>@Model.Navn</h2>
+        <p class="info">@Model.Beskrivelse</p>
 
-
-    <div class="detaljebillede">
-        <img class="img-fluid maerkat" src="~/Content/Images/Produkter/@Model.Billede" alt="Produktbillede" />
     </div>
 
-    <p>
-        <b>Øltype:</b> @Model.KategoriensNavn<br />
-        <b> Styrke: </b> @Model.Alkohol % <br />
-        <b> Bitterhed: </b> @Model.Bitterhed IBU <br />
-        <b> Farve: </b> @Model.Farve EBC <br />
-        <b> Gærtype: </b> @Model.Gaertype <br />
+    <div class="col-md-3 offset-md-1">
+        <img class="img-fluid maerkat" src="~/Content/Images/Produkter/@Model.Billede" alt="Produktbillede" />
 
-    </p>
-
-
-    <p>@Model.Beskrivelse</p>
-
-
-
+        <p class="bestil1"><b class="bestil1">@Model.Pris kr.</b></p>
+        <a href="~/Home/Bestilling/" class="bestil2 btn btn-dark">Bestilling her</a>
+    </div>
 </div>
-
-<p><b>@Model.Pris kr.</b></p>
-<a href="~/Home/Bestilling/" class="bestil btn btn-dark">Bestilling her</a> 

@@ -11,7 +11,7 @@
     <div class="container">
         <section class="row">
             <div class="col-md-12">
-                <h2>Bestilling</h2>
+                <center><h1 id="indexheadline">Bestilling</h1></center>
             </div>
         </section>
 
@@ -40,7 +40,7 @@
                 </select>
                 <br />
                 <select name="ProduktID">
-                    <option disabled selected>Valg 1</option>
+                    <option disabled selected>Valg 2</option>
                     @foreach (ProduktKategoriJoin produktnavn in ViewBag.AlleProdukter)
                     {
                         <option value="@produktnavn.ID">@produktnavn.Navn</option>
@@ -48,7 +48,7 @@
                 </select>
                 <br />
                 <select name="ProduktID">
-                    <option disabled selected>Valg 1</option>
+                    <option disabled selected>Valg 3</option>
                     @foreach (ProduktKategoriJoin produktnavn in ViewBag.AlleProdukter)
                     {
                         <option value="@produktnavn.ID">@produktnavn.Navn</option>
@@ -56,7 +56,7 @@
                 </select>
                 <br />
                 <select name="ProduktID">
-                    <option disabled selected>Valg 1</option>
+                    <option disabled selected>Valg 4</option>
                     @foreach (ProduktKategoriJoin produktnavn in ViewBag.AlleProdukter)
                     {
                         <option value="@produktnavn.ID">@produktnavn.Navn</option>
@@ -141,6 +141,23 @@
                         </div>
                     </div>
 
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="form_Zipcode">Postnummer *</label>
+                            <input id="form_Zipcode" type="number" name="PostNummer" class="form-control" placeholder="Indtast venligst dit Postnummer *" required="required" data-error="Dit postnummer skal udfyldes">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="form_City">By navn *</label>
+                            <input id="form_City" type="text" name="ByNavn" class="form-control" placeholder="Indtast venligst dit by navn *" required="required" data-error="Dit By navn skal udfyldes">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+
+
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="form_email">Mail *</label>
@@ -158,7 +175,7 @@
                     </div>
 
                     <div class="col-md-12">
-                        <input type="submit" class="btn btn-outline-dark btn-send" value="Videre til betaling">
+                        <input type="submit" class="btn btn-outline-dark btn-send bestil2" value="Videre til betaling">
                     </div>
 
                 </div>
