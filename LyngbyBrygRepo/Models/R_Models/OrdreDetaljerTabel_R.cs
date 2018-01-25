@@ -18,6 +18,12 @@ namespace LyngbyBrygRepo.Models.R_Models
         public string Email { get; set; }
         public string Phone { get; set; }
 
+        public string Password { get; set; }
+
+        public string PostNummer { get; set; }
+
+        public string ByNavn { get; set; }
+
         public List<int> KategoriID { get; set; }
 
         public bool AbonnementID { get; set; }

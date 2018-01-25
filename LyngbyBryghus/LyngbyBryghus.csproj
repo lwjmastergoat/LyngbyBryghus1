@@ -121,8 +121,15 @@
     <Content Include="Content\Images\CMS\blue_white_spots_background_65560_1920x1080.jpg" />
     <Content Include="Content\Images\CMS\cms1.png" />
     <Content Include="Content\Images\CMS\white-background-5.jpg" />
+    <Content Include="Content\Images\Generelt\10400265_1110249329015940_7745289610892920986_n.jpg" />
     <Content Include="Content\Images\Generelt\baggrund3.jpg" />
+    <Content Include="Content\Images\Generelt\footer_hjelm.png" />
+    <Content Include="Content\Images\Generelt\hjelm_sort.png" />
+    <Content Include="Content\Images\Generelt\Logo_Skrift.png" />
+    <Content Include="Content\Images\Generelt\lyngbybryghuslogoblack-min.png" />
     <Content Include="Content\Images\Generelt\lyngbybryghuslogoskriftblack-min.png" />
+    <Content Include="Content\Images\Generelt\omosplaceholder.jpg" />
+    <Content Include="Content\Images\Generelt\Slide02.jpg" />
     <Content Include="Content\Images\Produkter\201801181244035.png" />
     <Content Include="Content\Images\Produkter\201801181253504.png" />
     <Content Include="Content\Images\Produkter\201801200947577.png" />
