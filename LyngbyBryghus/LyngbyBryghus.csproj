@@ -114,9 +114,12 @@
     <Content Include="Content\CSS\CMSCSSMAIN.css" />
     <Content Include="Content\CSS\font-awesome.css" />
     <Content Include="Content\CSS\font-awesome.min.css" />
+    <Content Include="Content\Images\CMS\LOGIN.png" />
     <Content Include="Content\CSS\loginmainlayout.css" />
+    <Content Include="Content\CSS\LoginStyleAdmin.css" />
     <Content Include="Content\CSS\mainlayout.css" />
     <Content Include="Content\Images\CMS\blue_white_spots_background_65560_1920x1080.jpg" />
+    <Content Include="Content\Images\CMS\cms1.png" />
     <Content Include="Content\Images\CMS\white-background-5.jpg" />
     <Content Include="Content\Images\Generelt\baggrund3.jpg" />
     <Content Include="Content\Images\Generelt\lyngbybryghuslogoskriftblack-min.png" />
@@ -208,6 +211,7 @@
     <Content Include="Areas\Kunde\Views\Ordre\Index.cshtml" />
     <Content Include="Areas\Kunde\Views\web.config" />
     <Content Include="Views\KundeLogin\Index.cshtml" />
+    <Content Include="Views\Shared\_LoginStyleAdmin.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -255,6 +259,7 @@
     <Compile Include="ViewModels\Forsiden.cs" />
     <Compile Include="ViewModels\Kontakt.cs" />
     <Compile Include="ViewModels\Nyheder.cs" />
+    <Compile Include="ViewModels\ProduktVM.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

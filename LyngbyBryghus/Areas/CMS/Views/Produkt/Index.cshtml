@@ -6,8 +6,7 @@
     Layout = "~/Views/Shared/_CMSLayout.cshtml";
 }
 
-<h1 class="text-center">Produkt</h1>
-<hr />
+<h1>Produkter</h1>
 
 <table>
     <thead>
@@ -21,7 +20,7 @@
             <td>Farve</td>
             <td>Bitterhed</td>
             <td>Gærtype</td>
-            <td><a href="/CMS/Produkt/AddNew"><button class="btn alert-info">Tilføj Produkt</button></a></td>
+            <td><a href="/CMS/Produkt/AddNew"><button class="btn btntilfoej">Tilføj Produkt</button></a></td>
             <td></td>
 
 
@@ -43,14 +42,14 @@
                 <td class="remove">
                     @if ((int)Session["rolle"] >= 1)
                     {
-                        <a href="/CMS/Produkt/Delete/@item.ID"><button class="btn alert-danger">Remove</button></a>
+                        <a href="/CMS/Produkt/Delete/@item.ID"><button class="btn bredde" >Fjern</button></a>
                     }
                 </td>
 
                 <td class="rediger">
                     @if ((int)Session["rolle"] >= 1)
                     {
-                        <a href="/CMS/Produkt/Edit/@item.ID"><button class="btn alert-primary">Edit</button></a>
+                        <a href="/CMS/Produkt/Edit/@item.ID"><button class="btn btnrediger">Rediger</button></a>
                     }
                 </td>
 

@@ -8,6 +8,7 @@ using LyngbyBrygRepo;
 using LyngbyBrygRepo.Factories;
 using LyngbyBrygRepo.Models;
 using LyngbyBryghus.Helpers;
+using LyngbyBryghus.ViewModels;
 
 namespace LyngbyBryghus.Areas.CMS.Controllers
 {
@@ -17,6 +18,7 @@ namespace LyngbyBryghus.Areas.CMS.Controllers
         int Admin = 2;
         int Editor = 1;
 
+        KategoriFac kf = new KategoriFac();
         ProduktFac pf = new ProduktFac();
         FileTools ft = new FileTools();
         // GET: CMS/Produkt
@@ -93,7 +95,16 @@ namespace LyngbyBryghus.Areas.CMS.Controllers
                 return Redirect("/CMS/Produkt");
             }
 
-            return View(pf.Get(ID));
+            ProduktVM produkt = new ProduktVM();
+
+            produkt.Produkter = pf.Get(ID);
+            produkt.Kategorier = kf.GetAll();
+
+            
+
+
+
+            return View(produkt);
         }
 
         [HttpPost]

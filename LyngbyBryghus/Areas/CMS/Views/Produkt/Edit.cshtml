@@ -1,5 +1,5 @@
-﻿@using LyngbyBrygRepo
-@model ProduktTabellen
+﻿@using LyngbyBryghus.ViewModels
+@model ProduktVM
 
 
 @{
@@ -14,34 +14,40 @@
             <div class="col-sm-6">
                 <h2 class="headlineh2">Navn</h2>
                 <br />
-                <input type="text" name="Navn" class="inputs hdinput" value="@Model.Navn" />
+                <input type="text" name="Navn" class="inputs hdinput" value="@Model.Produkter.Navn" />
                 <br />
                 <h2>Beskrivelse</h2>
                 <br />
-                <textarea class="inputs" name="Main">@Model.Beskrivelse</textarea>
+                <textarea class="inputs" name="Main">@Model.Produkter.Beskrivelse</textarea>
                 <h2 class="headlineh2">Kategori</h2>
                 <br />
-                <input type="text" name="KategoriID" class="inputs hdinput" value="@Model.KategoriID" />
+                <select name="KategoriID">
+                    @foreach (var lol in Model.Kategorier)
+                    {
+                        <option value="@lol.ID"@(Model.Produkter.KategoriID == lol.ID ? "selected" : null)>@lol.Navn</option>
+                    }
+                </select>
+                @*<input type="text" name="KategoriID" class="inputs hdinput" value="@Model.KategoriID" />*@
                 <br />
                 <h2 class="headlineh2">Pris</h2>
                 <br />
-                <input type="text" name="Pris" class="inputs hdinput" value="@Model.Pris" />
+                <input type="text" name="Pris" class="inputs hdinput" value="@Model.Produkter.Pris" />
                 <br />
                 <h2 class="headlineh2">Alkohol</h2>
                 <br />
-                <input type="text" name="Navn" class="inputs hdinput" value="@Model.Alkohol" />
+                <input type="text" name="Navn" class="inputs hdinput" value="@Model.Produkter.Alkohol" />
                 <br />
                 <h2 class="headlineh2">Farve</h2>
                 <br />
-                <input type="text" name="Farve" class="inputs hdinput" value="@Model.Farve" />
+                <input type="text" name="Farve" class="inputs hdinput" value="@Model.Produkter.Farve" />
                 <br />
                 <h2 class="headlineh2">Bitterhed</h2>
                 <br />
-                <input type="text" name="Bitterhed" class="inputs hdinput" value="@Model.Bitterhed" />
+                <input type="text" name="Bitterhed" class="inputs hdinput" value="@Model.Produkter.Bitterhed" />
                 <br />
                 <h2 class="headlineh2">Gærtypen</h2>
                 <br />
-                <input type="text" name="Gaertype" class="inputs hdinput" value="@Model.Gaertype" />
+                <input type="text" name="Gaertype" class="inputs hdinput" value="@Model.Produkter.Gaertype" />
                 <br />
 
             </div>
@@ -50,14 +56,14 @@
                 <br />
                 <input type="file" class="roleselect" name="Photo" />
                 <br />
-                <input type="hidden" value="@Model.ID" name="ID" />
+                <input type="hidden" value="@Model.Produkter.ID" name="ID" />
                 <br />
 
 
-                @if (Model.Billede != null)
+                @if (Model.Produkter.Billede != null)
                 {
                     <h2 class="currentimg"> Current Picture </h2>
-                    <img src="~/Content/Images/Produkter/@Model.Billede" width="300" />
+                    <img src="~/Content/Images/Produkter/@Model.Produkter.Billede" width="300" />
                     <br />
 
                 }

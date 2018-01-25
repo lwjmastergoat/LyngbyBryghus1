@@ -20,7 +20,7 @@
             <td>Email</td>
             <td>Mobil</td>
             <td>Billed</td>
-            <td><a href="#"><button class="btn alert-info disabled">Tilføj Kontakt</button></a></td>
+            <td><a href="#"><button class="btn btntilfoej disabled">Tilføj Kontakt</button></a></td>
             <td></td>
 
 
@@ -41,14 +41,14 @@
                 <td class="remove">
                     @if ((int)Session["rolle"] >= 1)
                     {
-                        <a href="#"><button class="btn alert-danger disabled">Remove</button></a>
+                        <a href="#"><button class="btn bredde disabled">Fjern</button></a>
                     }
                 </td>
 
                 <td class="rediger">
                     @if ((int)Session["rolle"] >= 1)
                     {
-                        <a href="/CMS/Kontakt/Edit/@item.ID"><button class="btn alert-primary">Edit</button></a>
+                        <a href="/CMS/Kontakt/Edit/@item.ID"><button class="btn btnrediger">Rediger</button></a>
                     }
                 </td>
 
