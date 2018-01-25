@@ -11,7 +11,7 @@
 <div class="container">
     <section class="row">
         <div class="col-md-12">
-            <h2>@Model.Overskrift</h2>
+            <center><h2 id="indexheadline">@Model.Overskrift</h2></center>
         </div>
     </section>
 
@@ -24,17 +24,7 @@
     </section>
 
     <section class="row">
-        <div class="col-md-4 text-center">
-            <p>
-                @Model.Adresse<br />
-                @Model.Postnummer @Html.Raw(@Model.ByNavn.Replace(Environment.NewLine, "<br />"))
-            </p>
-            <p class="kontaktlinks">
-                Email: <a href="mailto:@Model.Mailadresse">@Model.Mailadresse</a><br />
-                Telefon: <a href="tel:@Model.Mobil">@Model.Mobil</a>
-            </p>
-        </div>
-        <div class="col-md-8 text-right">
+        <div class="col-md-8">
             @*<p>
                     <img src="@Model.Billede" alt="Kontaktbillede" />
                 </p>*@
@@ -42,6 +32,18 @@
                     width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe> @* MANGLER CUSTOM API KEY *@
                 </div>
             </section>
+
+        <div class="col-md-4">
+            <p>
+                @Model.Adresse<br />
+                @Model.Postnummer @Html.Raw(@Model.ByNavn.Replace(Environment.NewLine, "<br />"))
+            </p>
+            <p class="kontaktlinks">
+                Email: <b><a href="mailto:@Model.Mailadresse">@Model.Mailadresse</a></b><br />
+                Telefon: <b><a href="tel:@Model.Mobil">@Model.Mobil</a></b>
+            </p>
+        </div>
+
 
     <section class="row">
         <div class="col-md-12">
