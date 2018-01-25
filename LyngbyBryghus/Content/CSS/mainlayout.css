@@ -119,6 +119,22 @@ footer {
     max-height: 150px;
 }
 
+.footerlogoskrift{
+    max-height:50px;
+}
+
+.facebook{
+    float:right;
+}
+
+.contact{
+    float:right;
+}
+
+.footeradresse{
+    margin-top:25px;
+}
+
 /* #endregion */
 
 /*#region Produkter */
