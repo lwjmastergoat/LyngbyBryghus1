@@ -17,35 +17,40 @@
 </style>
 <div class="container">
     <section class="row">
-        <div class="col-sm-6">
-            <h2>Ny kunde</h2><br />
-            <p>
-                Opret dig som ny kunde og få adgang til forskellige funktioner som f.eks. din ordrehistorik m.m.
-            </p>
-            <p>
-                <button class="btn knap1" type="button">Opret dig som kunde</button>
-            </p>
+        <div class="col-md-12">
+            <center><h2 id="indexheadline">Login</h2></center><br />
         </div>
-
-        <div class="col-sm-6">
+    </section>
+    <section class="row">
+        <div class="col-md-5">
             <div class="loginwrap d-block mx-auto">
-                <h2>Login</h2><br />
                 <form method="post" action="/KundeLogin/Index/">
-                    <p>
-                        Her kan du logge dig ind, hvis du allerede er kunde<br />
-                        <input type="text" class="input1" name="Navn" placeholder="Brugernavn" required />
-                        <br />
-                        <input type="password" class="input2" name="Password" placeholder="Kodeord" required />
-                        <br />
+                    <div class="form-group">
+                        <input id="form_name" type="text" name="Navn" class="form-control" placeholder="Brugernavn" required />
+                        <input id="form_password" type="password" name="Password" class="form-control" placeholder="Kodeord" required />
                         <button class="btn knap2" type="submit">Login</button>
-                        <button class="btn knap1" type="button">Glemt password</button><br />
-                        <a href="/Home/Index"><button class="btn knap1" type="button">Tilbage</button></a>
-
-                        <br />
-                        @Html.Raw(ViewBag.Msg)
-                    </p>
+                        <button class="btn knap1" type="button">Glemt password</button>
+                    </div>
                 </form>
             </div>
         </div>
     </section>
+    <section class="row">
+        <div class="col-md-12">
+            <div class="tilbage"><a href="/Home/Index"><button class="btn knap1" type="button">Tilbage</button></a></div>
+        </div>
+    </section>
 </div>
+@*<p>
+        Velkommen til dit kundelogin<br />
+        <input type="text" class="input1" name="Navn" placeholder="Brugernavn" required />
+        <br />
+        <input type="password" class="input2" name="Password" placeholder="Kodeord" required />
+        <br />
+        <button class="btn knap2" type="submit">Login</button>
+        <button class="btn knap1" type="button">Glemt password</button><br />
+        <a href="/Home/Index"><button class="btn knap1" type="button">Tilbage</button></a>
+
+        <br />
+        @Html.Raw(ViewBag.Msg)
+    </p>*@

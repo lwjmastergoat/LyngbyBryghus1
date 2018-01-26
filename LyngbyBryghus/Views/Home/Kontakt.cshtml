@@ -11,7 +11,7 @@
 <div class="container">
     <section class="row">
         <div class="col-md-12">
-            <h2>@Model.Overskrift</h2>
+            <center><h2 id="indexheadline">@Model.Overskrift</h2></center>
         </div>
     </section>
 
@@ -24,28 +24,24 @@
     </section>
 
     <section class="row">
-        <div class="col-md-4 text-center">
-            <p>
-                @Model.Adresse<br />
-                @Model.Postnummer @Html.Raw(@Model.ByNavn.Replace(Environment.NewLine, "<br />"))
-            </p>
-            <p class="kontaktlinks">
-                Email: <a href="mailto:@Model.Mailadresse">@Model.Mailadresse</a><br />
-                Telefon: <a href="tel:@Model.Mobil">@Model.Mobil</a>
-            </p>
-        </div>
-        <div class="col-md-8 text-right">
+        <div class="col-md-6">
             @*<p>
                     <img src="@Model.Billede" alt="Kontaktbillede" />
                 </p>*@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2209.770501454556!2d10.74499065152139!3d56.36829188062787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464c2b608152cc73%3A0xd75e2ebba1663da5!2sSvinget+2%2C+8570+Trustrup!5e0!3m2!1sen!2sdk!4v1516791051925"
                     width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe> @* MANGLER CUSTOM API KEY *@
                 </div>
+
+
+                <div class="col-md-6 text-center">
+                    <p>
+                        @Model.Adresse<br />
+                        @Model.Postnummer @Html.Raw(@Model.ByNavn.Replace(Environment.NewLine, "<br />"))
+                    </p>
+                    <p class="kontaktlinks">
+                        Email: <b><a href="mailto:@Model.Mailadresse">@Model.Mailadresse</a></b><br />
+                        Telefon: <b><a href="tel:@Model.Mobil">@Model.Mobil</a></b>
+                    </p>
+                </div>
             </section>
-
-    <section class="row">
-        <div class="col-md-12">
-
         </div>
-    </section>
-</div>

@@ -38,7 +38,9 @@ h1,h2,h3,h4,h5,h6{
 a {
     color: #000;
 } 
-
+.tilbage {
+    float: right;
+}
 a:hover {
     text-decoration: none;
     color: #000;

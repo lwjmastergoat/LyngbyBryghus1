@@ -13,5 +13,13 @@ namespace LyngbyBryghus.Areas.Kunde.Controllers
         {
             return View();
         }
+        public ActionResult KundeDetaljer()
+        {
+            return View();
+        }
+        public ActionResult KundeOrdre()
+        {
+            return View();
+        }
     }
 }
