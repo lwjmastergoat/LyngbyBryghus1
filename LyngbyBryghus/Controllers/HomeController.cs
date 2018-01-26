@@ -8,7 +8,6 @@ using LyngbyBrygRepo.Factories;
 using LyngbyBrygRepo.Models;
 using LyngbyBrygRepo;
 using LyngbyBryghus.ViewModels;
-using LyngbyBrygRepo.Models;
 using LyngbyBrygRepo.Models.R_Models;
 
 namespace LyngbyBryghus.Controllers

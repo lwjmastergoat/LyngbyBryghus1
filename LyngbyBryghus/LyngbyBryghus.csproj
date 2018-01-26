@@ -220,6 +220,8 @@
     <Content Include="Views\KundeLogin\Index.cshtml" />
     <Content Include="Views\Shared\_LoginStyleAdmin.cshtml" />
     <Content Include="Views\Home\OrderConfirmation.cshtml" />
+    <Content Include="Areas\Kunde\Views\Ordre\KundeDetaljer.cshtml" />
+    <Content Include="Areas\Kunde\Views\Ordre\KundeOrdre.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
