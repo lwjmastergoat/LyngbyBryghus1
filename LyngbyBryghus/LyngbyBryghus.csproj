@@ -130,6 +130,7 @@
     <Content Include="Content\Images\Generelt\lyngbybryghuslogoskriftblack-min.png" />
     <Content Include="Content\Images\Generelt\omosplaceholder.jpg" />
     <Content Include="Content\Images\Generelt\Slide02.jpg" />
+    <Content Include="Content\Images\Nyheder\201801261030559.png" />
     <Content Include="Content\Images\Produkter\201801181244035.png" />
     <Content Include="Content\Images\Produkter\201801181253504.png" />
     <Content Include="Content\Images\Produkter\201801200947577.png" />
@@ -278,7 +279,6 @@
     <Folder Include="Areas\Kunde\Models\" />
     <Folder Include="Areas\Kunde\Views\Shared\" />
     <Folder Include="Content\Images\Kontakt\" />
-    <Folder Include="Content\Images\Nyheder\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LyngbyBrygRepo\LyngbyBrygRepo.csproj">
