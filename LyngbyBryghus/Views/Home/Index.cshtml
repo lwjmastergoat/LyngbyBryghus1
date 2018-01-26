@@ -16,26 +16,27 @@
     </section>
 
     <section class="row">
-        <div class="col-md-7">
+
+
             @foreach (var Nyhed in Model.Nyheder)
             {
-                <h2 class="news">@Nyhed.Overskrift</h2>
+                <div class="col-md-7">
+                    <h2 class="news">@Nyhed.Overskrift</h2>
 
-                <h5>@Nyhed.Underoverskrift</h5>
+                    <h5>@Nyhed.Underoverskrift</h5>
 
-                <p>@Nyhed.Indhold</p>
+                    <p>
+                        @Nyhed.Indhold
+                    </p>
+                </div>
 
-
-                <img class="newsimage" src="~/Content/Images/Nyheder/@Nyhed.Image"/>
-              
+                  <div class="col-md-5"><img class="newsimage" src="~/Content/Images/Nyheder/@Nyhed.Image" /></div>
             }
-        </div>
-     
-        <div>
-        
-        </div>
+
 
     </section>
+
+
 
     @*OM OS*@
 
@@ -53,7 +54,7 @@
 
     <section class="row">
         <div class="col-md-12">
-            <img class="img-fluid omosbillede" src="~/Content/Images/Generelt/Slide02.jpg" alt="Billede af øl under Om os"/>
+            <img class="img-fluid omosbillede" src="~/Content/Images/Generelt/Slide02.jpg" alt="Billede af øl under Om os" />
         </div>
     </section>
 </div>
