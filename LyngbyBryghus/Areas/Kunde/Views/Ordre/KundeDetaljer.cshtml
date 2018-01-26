@@ -1,14 +1,13 @@
-﻿@* KUNDE HOME INDEX *@
-
+﻿
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "KundeDetaljer";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 
 <div class="container">
     <section class="row">
         <div class="col-md-12">
-            <center><h2 id="indexheadline">Kunde Index</h2></center>
+            <center><h2 id="indexheadline">KundeDetaljer</h2></center>
         </div>
     </section>
 
@@ -23,7 +22,7 @@
             {
                 <a href="/Login/Logout">Log Ud</a>
                 <br />
-                    <text><b>Kunde ID</b> |</text> @Session["id"]
+                <text><b>Kunde ID</b> |</text> @Session["id"]
             }
 
             <br />
@@ -45,6 +44,7 @@
     </section>
 
 </div>
+
 
 
 
