@@ -7,41 +7,55 @@
 <h1>Tilføj Produkt</h1>
 <hr />
 
-<form method="post" action="/CMS/Produkt/AddNew/" enctype="multipart/form-data">
-    <label>Navn</label>
-    <br />
-    <input type="text" name="Navn" />
-    <br />
-    <label>Beskrivelse</label>
-    <br />
-    <textarea name="Beskrivelse"></textarea>
-    <br />
-    <label>Kategori ID</label>
-    <br />
-    <input type="text" name="KategoriID" />
-    <label>Billed</label>
-    <br />
-    <input type="file" name="Photo" />
-    <br />
-    <label>Pris</label>
-    <br />
-    <input type="text" name="Pris" />
-    <br />
-    <label>Alkohol</label>
-    <br />
-    <input type="text" name="Alkohol" />
-    <br />
-    <label>Farve</label>
-    <br />
-    <input type="text" name="Farve" />
-    <br />
-    <label>Bitterhed</label>
-    <br />
-    <input type="text" name="Bitterhed" />
-    <br />
-    <label>Gærtype</label>
-    <br />
-    <input type="text" name="Gaertype" />
-    <br />
-    <button type="submit">Opret artikel</button>
+
+        <form method="post" action="/CMS/Produkt/AddNew/" enctype="multipart/form-data">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+                <label>Navn</label>
+                <br />
+                <input type="text" name="Navn" />
+                <br />
+                <label>Beskrivelse</label>
+                <br />
+                <textarea class="textarea" name="Beskrivelse"></textarea>
+                <br />
+                <label>Kategori ID</label>
+                <br />
+                <input type="text" name="KategoriID" />
+                <br />
+                <label>Billed</label>
+                <br />
+
+                <input type="file" name="Photo" />
+            </div>
+            <div class="col-sm-6">
+                <label>Pris</label>
+                <br />
+                <input type="text" name="Pris" />
+                <br />
+                <label>Alkohol</label>
+                <br />
+                <input type="text" name="Alkohol" />
+                <br />
+                <label>Farve</label>
+                <br />
+                <input type="text" name="Farve" />
+                <br />
+                <label>Bitterhed</label>
+                <br />
+                <input type="text" name="Bitterhed" />
+                <br />
+                <label>Gærtype</label>
+                <br />
+                <input type="text" name="Gaertype" />
+                <br />
+                <br />
+                <button type="submit">Opret artikel</button>
+            </div>
+        </div>
+    </div>
+
+
 </form>
+        

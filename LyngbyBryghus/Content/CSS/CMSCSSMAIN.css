@@ -1,5 +1,14 @@
 ﻿/* Global
 / -------------------------------------------------- */
+
+@font-face {
+    font-family: 'fontawesome-webfont';
+    src: url('../../fonts/fontawesome-webfont.eot') format('embedded-opentype'), 
+        url('../../fonts/fontawesome-webfont.svg') format('svg'), 
+        url('../../fonts/fontawesome-webfont.ttf') format('truetype'), 
+        url('../../fonts/fontawesome-webfont.woff') format('woff'), 
+        url('../../fonts/FontAwesome.otf') format('opentype');
+}
 html {
   position: relative;
   min-height: 100%;
@@ -386,10 +395,14 @@ h6 {
     color: #000;
 }
 
+.textarea {
+    width: 600px;
+    height: 200px;
+}
 
 .loginwrap {
     width: 300px;
-    height: 250px;
+    height: 320px;
     border-radius: 5px 5px 5px 5px;
     border:1px solid #00a1e7;
 }
@@ -413,9 +426,9 @@ form label b {
 }
 
 .roleselect {
-    border: 1px solid #b8daff;
+
     padding-right: 4px;
-    background-color: #cce5ff;
+
     padding-top: 5px;
     padding-bottom: 8px;
     margin-top: 15px;
@@ -440,6 +453,6 @@ form label b {
     margin-bottom: 18px;
 }
 .roleselect::-webkit-file-upload-button {
-    background-color: black;
+
 }
 

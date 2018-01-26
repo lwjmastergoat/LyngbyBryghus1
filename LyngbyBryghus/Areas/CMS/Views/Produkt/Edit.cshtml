@@ -13,14 +13,14 @@
         <div class="row">
             <div class="col-sm-6">
                 <h2 class="headlineh2">Navn</h2>
-                <br />
-                <input type="text" name="Navn" class="inputs hdinput" value="@Model.Produkter.Navn" />
+                
+                <input type="text" name="Navn" class="" value="@Model.Produkter.Navn" />
                 <br />
                 <h2>Beskrivelse</h2>
-                <br />
-                <textarea class="inputs" name="Main">@Model.Produkter.Beskrivelse</textarea>
+         
+                <textarea class="textarea" name="Main">@Model.Produkter.Beskrivelse</textarea>
                 <h2 class="headlineh2">Kategori</h2>
-                <br />
+                
                 <select name="KategoriID">
                     @foreach (var lol in Model.Kategorier)
                     {
@@ -30,30 +30,27 @@
                 @*<input type="text" name="KategoriID" class="inputs hdinput" value="@Model.KategoriID" />*@
                 <br />
                 <h2 class="headlineh2">Pris</h2>
-                <br />
-                <input type="text" name="Pris" class="inputs hdinput" value="@Model.Produkter.Pris" />
+                
+                <input type="text" name="Pris" class="" value="@Model.Produkter.Pris" />
                 <br />
                 <h2 class="headlineh2">Alkohol</h2>
-                <br />
-                <input type="text" name="Navn" class="inputs hdinput" value="@Model.Produkter.Alkohol" />
+                <input type="text" name="Navn" class="" value="@Model.Produkter.Alkohol" />
                 <br />
                 <h2 class="headlineh2">Farve</h2>
-                <br />
-                <input type="text" name="Farve" class="inputs hdinput" value="@Model.Produkter.Farve" />
-                <br />
-                <h2 class="headlineh2">Bitterhed</h2>
-                <br />
-                <input type="text" name="Bitterhed" class="inputs hdinput" value="@Model.Produkter.Bitterhed" />
-                <br />
-                <h2 class="headlineh2">Gærtypen</h2>
-                <br />
-                <input type="text" name="Gaertype" class="inputs hdinput" value="@Model.Produkter.Gaertype" />
+                <input type="text" name="Farve" class="" value="@Model.Produkter.Farve" />
                 <br />
 
             </div>
             <div class="col-sm-6">
-                <h2>New Picture</h2>
+
+                <h2 class="headlineh2">Bitterhed</h2>
+                <input type="text" name="Bitterhed" class="" value="@Model.Produkter.Bitterhed" />
                 <br />
+                <h2 class="headlineh2">Gærtypen</h2>
+
+                <input type="text" name="Gaertype" class="" value="@Model.Produkter.Gaertype" />
+                <br />
+                <h2>New Picture</h2>
                 <input type="file" class="roleselect" name="Photo" />
                 <br />
                 <input type="hidden" value="@Model.Produkter.ID" name="ID" />
@@ -67,12 +64,10 @@
                     <br />
 
                 }
-
-            </div>
-
-            <div class="col-sm-12">
+                <br />
                 <button type="submit">Edit Produkt</button>
             </div>
+
         </div>
     </div>
 </form>
