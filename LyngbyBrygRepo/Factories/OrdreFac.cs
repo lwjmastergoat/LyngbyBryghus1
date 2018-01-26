@@ -15,7 +15,7 @@ namespace LyngbyBrygRepo.Factories
 
             //Henter alle ordre ud fra ID, (Bruger ID), så brugeren kan gå ind og se samtlige  ordre de har placeret. (Måske burde sorteres efter ordre ID også?)
         {
-            String SQL = "SELECT OrdreDetaljerTabel.ID, ProduktID, Antal, OrdreDetaljerTabel.BrugerID, KategoriID, Dato, OrdreID FROM OrdreDetaljerTabel JOIN KundeOrdreTabel ON OrdreDetaljerTabel.ID = KundeOrdreTabel.ID WHERE OrdreDetaljerTabel.BrugerID =" + "@ID";
+            String SQL = "SELECT OrdreDetaljerTabel.ID, ProduktID, Antal, OrdreDetaljerTabel.BrugerID, KategoriID, Dato, OrdreID FROM OrdreDetaljerTabel JOIN KundeOrdreTabel ON OrdreDetaljerTabel.ID = KundeOrdreTabel.ID WHERE OrdreDetaljerTabel.BrugerID =" + ID;
 
             return ExecuteSQL<OrdreDetaljerTabel>(SQL);
 

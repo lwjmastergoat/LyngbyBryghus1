@@ -21,12 +21,8 @@
 body {
     color: black;
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url('../Images/Generelt/baggrund3.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    overflow-y: scroll;
+    /*background-image: url('../Images/Generelt/baggrund3.jpg');*/
+    background-color:rgba(194, 177, 128, 0.6);
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -47,9 +43,15 @@ a:hover {
     text-decoration: none;
     color: #000;
 }
-.logo {
+.logohjelm {
     max-height: 150px;
 }
+
+.logoskrift{
+    max-height:100px;
+
+}
+
 section, footer {
     font-size: 18px;
 }
@@ -70,6 +72,11 @@ h1 {
 
 .omosbillede{
     margin-top:20px;
+}
+
+.news{
+
+    margin-bottom:10px;
 }
 
 .columns {
@@ -115,13 +122,6 @@ footer {
     width: 100%;
     height: 200px;  /*Set the fixed height of the footer here */
 }
-.footerlogo {
-    max-height: 150px;
-}
-
-.footerlogoskrift{
-    max-height:50px;
-}
 
 .facebook{
     float:right;
@@ -133,6 +133,7 @@ footer {
 
 .footeradresse{
     margin-top:25px;
+    float:left;
 }
 
 /* #endregion */
@@ -150,6 +151,10 @@ footer {
 
 .produktlinje{
     margin-bottom:30px;
+}
+
+.more {
+    text-align:center;
 }
 
 /*#endregion */

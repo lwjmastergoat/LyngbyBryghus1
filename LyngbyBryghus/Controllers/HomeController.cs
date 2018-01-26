@@ -86,10 +86,13 @@ namespace LyngbyBryghus.Controllers
             }
 
 
-            return View();
+            return RedirectToAction("OrderConfirmation");
         }
 
-
+        public ActionResult OrderConfirmation()
+        {
+            return View();
+        }
 
 
 

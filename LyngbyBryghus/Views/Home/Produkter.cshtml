@@ -28,9 +28,9 @@
         <div class="col-md-3">
             <center><h3>@item.Navn</h3></center>
 
-            <img class="maerkat img-fluid" src="~/Content/Images/Produkter/@item.Billede" alt="Produktbillede" /> <br />
+            <img class="maerkat img-fluid" src="~/Content/Images/Produkter/@item.Billede" alt="Produktbillede" />
 
-            <center> <a href="/Home/ProduktDetaljer/@item.ID/" class="more"> Se mere </a></center>
+            <a class="d-block mx-auto more" href="/Home/ProduktDetaljer/@item.ID/" > Se mere </a>
         </div>
 
         if (itemCount == 3)
